@@ -978,7 +978,7 @@ body > nav {
   width: 110px;
   min-height: 110px;
   flex-shrink: 0;
-  background: #f9f0f9;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
