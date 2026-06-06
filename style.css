@@ -1228,7 +1228,7 @@ body > nav {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--plum), #9b2350);
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2582,8 +2582,16 @@ footer {
   border-top: 1px solid #e8d5e8;
 }
 
+.about-legacy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
+  .about-legacy-grid    { grid-template-columns: 1fr; gap: 2rem; }
   .about-inner          { grid-template-columns: 1fr; gap: 3rem; }
   .contact-inner        { grid-template-columns: 1fr; gap: 3rem; }
   .packs-teaser-inner   { grid-template-columns: 1fr; gap: 2rem; }
