@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!--
+    Sakura cherry blossom - 5 heart-shaped petals with notch at tip
+    Matches brand asset: soft pink #f9c4b4, white stamen center
+  -->
+
+  <!-- Petals: heart-shape with notch, base at center (100,100), tip pointing away -->
+  <g fill="#f9c4b4">
+    <!-- 0° - tip pointing up -->
+    <path d="M100,100 C78,98,50,82,52,58 C54,40,68,28,84,32 C91,34,97,43,100,50 C103,43,109,34,116,32 C132,28,146,40,148,58 C150,82,122,98,100,100Z"/>
+    <!-- 72° -->
+    <path transform="rotate(72,100,100)" d="M100,100 C78,98,50,82,52,58 C54,40,68,28,84,32 C91,34,97,43,100,50 C103,43,109,34,116,32 C132,28,146,40,148,58 C150,82,122,98,100,100Z"/>
+    <!-- 144° -->
+    <path transform="rotate(144,100,100)" d="M100,100 C78,98,50,82,52,58 C54,40,68,28,84,32 C91,34,97,43,100,50 C103,43,109,34,116,32 C132,28,146,40,148,58 C150,82,122,98,100,100Z"/>
+    <!-- 216° -->
+    <path transform="rotate(216,100,100)" d="M100,100 C78,98,50,82,52,58 C54,40,68,28,84,32 C91,34,97,43,100,50 C103,43,109,34,116,32 C132,28,146,40,148,58 C150,82,122,98,100,100Z"/>
+    <!-- 288° -->
+    <path transform="rotate(288,100,100)" d="M100,100 C78,98,50,82,52,58 C54,40,68,28,84,32 C91,34,97,43,100,50 C103,43,109,34,116,32 C132,28,146,40,148,58 C150,82,122,98,100,100Z"/>
+  </g>
+
+  <!-- Stamens: 12 lines radiating from center, ending in round dots -->
+  <g stroke="white" stroke-width="1.6" stroke-linecap="round">
+    <line x1="100" y1="93" x2="100" y2="78"/>
+    <line x1="106" y1="94" x2="113" y2="80"/>
+    <line x1="110" y1="97" x2="121" y2="87"/>
+    <line x1="112" y1="100" x2="127" y2="100"/>
+    <line x1="110" y1="103" x2="121" y2="113"/>
+    <line x1="106" y1="106" x2="113" y2="120"/>
+    <line x1="100" y1="107" x2="100" y2="122"/>
+    <line x1="94"  y1="106" x2="87"  y2="120"/>
+    <line x1="90"  y1="103" x2="79"  y2="113"/>
+    <line x1="88"  y1="100" x2="73"  y2="100"/>
+    <line x1="90"  y1="97"  x2="79"  y2="87"/>
+    <line x1="94"  y1="94"  x2="87"  y2="80"/>
+  </g>
+  <g fill="white">
+    <circle cx="100" cy="76"  r="2.8"/>
+    <circle cx="114" cy="79"  r="2.8"/>
+    <circle cx="123" cy="85"  r="2.8"/>
+    <circle cx="129" cy="100" r="2.8"/>
+    <circle cx="123" cy="115" r="2.8"/>
+    <circle cx="114" cy="121" r="2.8"/>
+    <circle cx="100" cy="124" r="2.8"/>
+    <circle cx="86"  cy="121" r="2.8"/>
+    <circle cx="77"  cy="115" r="2.8"/>
+    <circle cx="71"  cy="100" r="2.8"/>
+    <circle cx="77"  cy="85"  r="2.8"/>
+    <circle cx="86"  cy="79"  r="2.8"/>
+  </g>
+  <!-- Center white disc -->
+  <circle cx="100" cy="100" r="11" fill="white"/>
+</svg>

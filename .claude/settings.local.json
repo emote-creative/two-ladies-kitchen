@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.hawaiimagazine.com)",
+      "WebFetch(domain:www.hawaiinewsnow.com)",
+      "WebFetch(domain:onolicioushawaii.com)",
+      "WebFetch(domain:www.honolulumagazine.com)",
+      "WebFetch(domain:www.hawaii-aloha.com)",
+      "WebFetch(domain:www.foodnetwork.com)",
+      "WebFetch(domain:foodgps.com)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(find /Users/livaguano -name \"*two*ladies*\" -o -name \"*TwoLadies*\" -o -name \"*logo*\" 2>/dev/null | grep -v \".git\\\\|Library/Caches\\\\|node_modules\" | head -10)",
+      "Bash(cp \"/Users/livaguano/Emote Creative /Brand Logos/TLK_fullcolorlogo.png\" \"/Users/livaguano/Two Ladies Kitchen/images/logo.png\" && echo \"Copied successfully\" && file \"/Users/livaguano/Two Ladies Kitchen/images/logo.png\")",
+      "Bash(python3)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs file)",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(read f *)",
+      "Bash(python3 -c 'from PIL import Image; img=Image.open\\('\\\\''__TRACKED_VAR__'\\\\''\\); print\\(img.size\\)')",
+      "Bash(cp \"/Users/livaguano/Dropbox/Mac/Desktop/Screenshot 2026-06-05 at 7.12.28 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-strawberry-shortcake.png\")",
+      "Bash(cp \"/Users/livaguano/Dropbox/Mac/Desktop/Screenshot 2026-06-05 at 7.12.01 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-boxes.png\")",
+      "Bash(cp \"/Users/livaguano/Dropbox/Mac/Desktop/Screenshot 2026-06-05 at 7.11.49 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-colorful-tray.png\")",
+      "Bash(ls \"/Users/livaguano/Dropbox/Mac/Desktop/\" | grep \"Jun\\\\|2026-06-05\" 2>/dev/null | head -10 *)",
+      "Bash(rsync \"/Users/livaguano/Dropbox/Mac/Desktop/Screenshot 2026-06-05 at 7.12.28 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-strawberry-shortcake.png\")",
+      "Bash(cp ~/Desktop/\"Screenshot 2026-06-05 at 7.11.49 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-colorful-tray.png\")",
+      "Bash(cp ~/Desktop/\"Screenshot 2026-06-05 at 7.12.01 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-boxes.png\")",
+      "Bash(mkdir -p \"/Users/livaguano/Two Ladies Kitchen/.claude\" && ls \"/Users/livaguano/Two Ladies Kitchen/.claude/\")"
+    ]
+  }
+}

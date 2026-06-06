@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Two Ladies Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="Two Ladies Kitchen" class="nav-logo-img" />Two Ladies Kitchen</a>
+    <ul class="nav-links" id="navLinks">
+      <li class="has-mega">
+        <a href="menu.html" class="mega-trigger">Menu <span class="nav-caret">▾</span></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <p class="mega-heading">Shop Our Menu</p>
+              <ul class="mega-list">
+                <li><a href="menu.html?cat=contemporary">Contemporary Mochi</a></li>
+                <li><a href="menu.html?cat=traditional">Traditional Mochi</a></li>
+                <li><a href="menu.html?cat=manju">Manju</a></li>
+                <li><a href="menu.html?cat=fruit">Fruit Mochi</a></li>
+                <li><a href="menu.html?cat=packs">Assortment Packs</a></li>
+              </ul>
+            </div>
+            <div class="mega-divider"></div>
+            <div class="mega-col">
+              <p class="mega-heading">Place an Order</p>
+              <ul class="mega-list">
+                <li><a href="menu.html#order">How to Order</a></li>
+                <li><a href="menu.html?cat=packs">Gift Packs</a></li>
+                <li><a href="contact.html">Custom Orders</a></li>
+              </ul>
+            </div>
+            <div class="mega-cards">
+              <a href="menu.html?cat=contemporary" class="mega-card">
+                <div class="mega-card-img"><img src="images/Contemporary Mochi/Brownie.png" alt="Contemporary Mochi" /></div>
+                <span>Contemporary Mochi</span>
+              </a>
+              <a href="menu.html?cat=traditional" class="mega-card">
+                <div class="mega-card-img"><img src="images/Traditional Mochi/daifuku.png" alt="Traditional Mochi" /></div>
+                <span>Traditional Mochi</span>
+              </a>
+              <a href="menu.html?cat=manju" class="mega-card">
+                <div class="mega-card-img"><img src="images/Manju/Azuma.png" alt="Manju" /></div>
+                <span>Manju</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="sakura-deco" style="width:300px;height:300px;top:-20px;left:-40px;transform:rotate(-15deg);opacity:0.38;"></div>
+    <div class="sakura-deco" style="width:240px;height:240px;bottom:-20px;right:-30px;transform:rotate(25deg);opacity:0.35;"></div>
+    <div class="sakura-deco" style="width:140px;height:140px;top:15%;right:18%;opacity:0.30;transform:rotate(-40deg);"></div>
+    <div class="sakura-deco" style="width:100px;height:100px;bottom:8%;left:15%;opacity:0.28;transform:rotate(20deg);"></div>
+    <div class="sakura-deco" style="width:70px;height:70px;top:12%;right:38%;opacity:0.22;transform:rotate(-30deg);"></div>
+    <img src="icons/Untitled-1.png"  class="page-hero-deco d1 icon-white" style="width:140px;opacity:0.1;" />
+    <img src="icons/Untitled-12.png" class="page-hero-deco d2 icon-white" style="width:180px;opacity:0.1;" />
+    <span class="section-tag">Fresh Daily</span>
+    <h1 class="page-hero-title">Our <em>Menu</em></h1>
+    <p class="page-hero-desc">Handcrafted mochi, manju, and seasonal fruit confections — made fresh every day with authentic ingredients.</p>
+  </div>
+
+  <!-- GLOSSARY -->
+  <div class="glossary-banner">
+    <div class="container">
+      <div class="glossary-title">✦ Ingredient Glossary ✦</div>
+      <div class="glossary-grid">
+        <div class="glossary-item"><span class="glossary-term">TSUBUSHI AN</span> — lumpy, sweet, red azuki bean paste</div>
+        <div class="glossary-item"><span class="glossary-term">KOSHI AN</span> — smooth paste of azuki beans</div>
+        <div class="glossary-item"><span class="glossary-term">SHIRO AN</span> — white, smooth lima bean paste</div>
+        <div class="glossary-item"><span class="glossary-term">KINAKO</span> — roasted soybean powder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU FEATURE BANNER -->
+  <div class="menu-feature">
+    <div class="menu-feature-inner">
+      <div class="menu-feature-img">
+        <img src="images/Website Photos/annahawaii.jpg" alt="Full mochi assortment" />
+      </div>
+      <div class="menu-feature-text">
+        <span class="section-tag">What We Make</span>
+        <h2 class="menu-feature-title">Handcrafted Fresh,<br /><em>Every Single Day</em></h2>
+        <p class="menu-feature-desc">
+          Over 20 varieties of mochi, manju, and seasonal fruit confections — each one made by hand using recipes passed down through generations. Nothing is frozen. Nothing is rushed. Every piece reflects nearly 30 years of craft.
+        </p>
+        <div class="menu-feature-chips">
+          <span class="menu-feature-chip">Contemporary Mochi</span>
+          <span class="menu-feature-chip">Traditional Mochi</span>
+          <span class="menu-feature-chip">Manju</span>
+          <span class="menu-feature-chip">Fruit Mochi</span>
+          <span class="menu-feature-chip">Assortment Packs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="menu-page">
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-filter="all">All</button>
+      <button class="tab-btn" data-filter="contemporary">Contemporary Mochi</button>
+      <button class="tab-btn" data-filter="traditional">Traditional Mochi</button>
+      <button class="tab-btn" data-filter="manju">Manju</button>
+      <button class="tab-btn" data-filter="fruit">Fruit Mochi</button>
+      <button class="tab-btn" data-filter="packs">Pre-Assortments</button>
+    </div>
+
+    <!-- Contemporary Mochi -->
+    <div class="menu-section visible" data-cat="contemporary">
+      <div class="cat-intro">
+        <div class="cat-intro-img">
+          <img src="images/Contemporary Mochi/Brownie.png" alt="Contemporary Mochi" />
+        </div>
+        <div class="cat-intro-text">
+          <div class="cat-intro-label">Category</div>
+          <div class="cat-intro-title"><img src="icons/Mochi-05.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Contemporary Mochi</div>
+          <p class="cat-intro-desc">Modern, playful flavors inspired by local and global favorites — wrapped in our signature soft, pillowy mochi dough. From Brownie to Lilikoi, these are the flavors that surprise first-time visitors and keep regulars coming back. Each piece is a little different, a little unexpected, and made fresh every morning.</p>
+        </div>
+      </div>
+      <div class="menu-list">
+
+        <div class="menu-item" data-id="brownie">
+          <div class="item-photo"><img src="images/Contemporary Mochi/Brownie.png" alt="Brownie Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Brownie</div>
+            <div class="item-desc">Pink mochi filled with a freshly-baked brownie</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="butter">
+          <div class="item-photo"><img src="images/Contemporary Mochi/Butter Mochi.png" alt="Butter Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Butter</div>
+            <div class="item-desc">A local, buttery, cake-style mochi</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="butterfly">
+          <div class="item-photo"><img src="images/Contemporary Mochi/butterfly.png" alt="Butterfly Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Butterfly</div>
+            <div class="item-desc">Blue mochi filled with white chocolate and koshi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="lilikoi">
+          <div class="item-photo"><img src="images/Contemporary Mochi/lilikoi.png" alt="Lilikoi Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Lilikoi</div>
+            <div class="item-desc">Passion fruit-flavored mochi</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="marshmallow">
+          <div class="item-photo"><img src="images/Contemporary Mochi/Marshmallow.png" alt="Marshmallow Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Marshmallow</div>
+            <div class="item-desc">Mochi filled with marshmallows, milk chocolate, and a pinch of tsubushi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="oreo">
+          <div class="item-photo"><img src="images/Contemporary Mochi/Oreo.png" alt="Oreo Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Oreo Cookie</div>
+            <div class="item-desc">Mochi filled with Oreos</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="peanutbutter">
+          <div class="item-photo"><img src="images/Contemporary Mochi/Peanut Butter.png" alt="Peanut Butter Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Peanut Butter</div>
+            <div class="item-desc">White, daisy-shaped mochi filled with Reese's Peanut Butter Cup and shiro-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="strawberry">
+          <div class="item-photo"><img src="images/Fruit/Strawberry Mochi.png" alt="Strawberry Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$3.75</div>
+            <div class="item-name">Strawberry <span class="item-badge badge-seasonal">Also in Fruit Mochi</span></div>
+            <div class="item-desc">Mochi with a whole strawberry and tsubushi-an</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Traditional Mochi -->
+    <div class="menu-section visible" data-cat="traditional">
+      <div class="cat-intro">
+        <div class="cat-intro-img">
+          <img src="images/Traditional Mochi/daifuku.png" alt="Traditional Mochi" />
+        </div>
+        <div class="cat-intro-text">
+          <div class="cat-intro-label">Category</div>
+          <div class="cat-intro-title"><img src="icons/Mochi-04.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Traditional Mochi</div>
+          <p class="cat-intro-desc">Time-honored recipes rooted in Japanese and Okinawan heritage. Our traditional line traces its lineage directly to a Buddhist priest trained in Japan — passed down to Aunty Tomi, then Aunty Nora, and now Emerald and Clyde. Classics like Daifuku, Nantu, and Yomogi are made exactly as they always have been: by hand, with care, and without shortcuts.</p>
+        </div>
+      </div>
+      <div class="menu-list">
+
+        <div class="menu-item" data-id="chichi">
+          <div class="item-photo"><img src="images/Traditional Mochi/chichi.png" alt="Chichi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Chichi</div>
+            <div class="item-desc">A soft, pink, milk-flavored mochi</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="daifuku">
+          <div class="item-photo"><img src="images/Traditional Mochi/daifuku.png" alt="Daifuku" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Daifuku</div>
+            <div class="item-desc">A traditional white mochi filled with tsubushi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="ginger">
+          <div class="item-photo"><img src="images/Traditional Mochi/ginger.png" alt="Ginger Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Ginger <span class="item-badge badge-friday">Friday Only</span></div>
+            <div class="item-desc">Mochi flavored with ginger puree</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="kamato">
+          <div class="item-photo"><img src="images/Traditional Mochi/Kinako.png" alt="Kamato" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Kamato</div>
+            <div class="item-desc">Mochi steamed with walnuts and tsubushi-an, dipped in kinako</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="nantu">
+          <div class="item-photo"><img src="images/Traditional Mochi/nantu.png" alt="Nantu" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Nantu</div>
+            <div class="item-desc">A traditional Okinawan mochi mixed with tsubushi-an, dipped in kinako</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="okinawan">
+          <div class="item-photo"><img src="images/Traditional Mochi/okinawan sweet potato.png" alt="Okinawan Sweet Potato" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Okinawan Sweet Potato</div>
+            <div class="item-desc">Sweet potato-an filled mochi</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="peach">
+          <div class="item-photo"><img src="images/Traditional Mochi/peach.png" alt="Peach Mochi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Peach (Momo)</div>
+            <div class="item-desc">A yellow mochi filled with shiro-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="plum">
+          <div class="item-photo"><img src="images/Traditional Mochi/plum flower.png" alt="Plum Flower" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Plum Flower</div>
+            <div class="item-desc">Red, a good-luck colored mochi, filled with koshi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="shiso">
+          <div class="item-photo"><img src="images/Traditional Mochi/shiso.png" alt="Shiso" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Shiso</div>
+            <div class="item-desc">Mochi rolled in shiso leaves, filled with koshi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="tsumami">
+          <div class="item-photo"><img src="images/Traditional Mochi/tsumami.png" alt="Tsumami" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Tsumami</div>
+            <div class="item-desc">A green, triangle-shaped mochi filled with tsubushi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="yomogi">
+          <div class="item-photo"><img src="images/Traditional Mochi/yogomi.png" alt="Yomogi" /></div>
+          <div class="item-info">
+            <div class="item-price">$1.50</div>
+            <div class="item-name">Yomogi <span class="item-badge badge-preorder">Pre-Order · Min. 12 pcs</span></div>
+            <div class="item-desc">A mochi scented with mugwort leaf and filled with koshi-an</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Manju -->
+    <div class="menu-section visible" data-cat="manju">
+      <div class="cat-intro">
+        <div class="cat-intro-img">
+          <img src="images/Manju/taiyaki.png" alt="Manju" />
+        </div>
+        <div class="cat-intro-text">
+          <div class="cat-intro-label">Category</div>
+          <div class="cat-intro-title"><img src="icons/Mochi-06.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Manju <small style="font-size:0.85rem;color:var(--mid);font-weight:400;">(Baked Confection)</small></div>
+          <p class="cat-intro-desc">Traditional Japanese baked sweets with tender golden crusts and sweet bean fillings. Unlike mochi, manju are baked rather than steamed or pounded — resulting in a soft pastry exterior that contrasts beautifully with the rich an filling inside. Our Taiyaki, shaped like the iconic Japanese fish, is a weekend-only special that draws lines on its own.</p>
+        </div>
+      </div>
+      <div class="menu-list">
+
+        <div class="menu-item" data-id="azuma">
+          <div class="item-photo"><img src="images/Manju/Azuma.png" alt="Azuma Yaki Manju" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Azuma Yaki Manju</div>
+            <div class="item-desc">Golden rich filled with tsubushi-an and topped with walnuts</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="furusato">
+          <div class="item-photo"><img src="images/Manju/Furusato.png" alt="Furusato Manju" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Furusato Manju</div>
+            <div class="item-desc">Filled with sweet potato-an, sprinkled with cinnamon</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="nashi">
+          <div class="item-photo"><img src="images/Manju/Nashi (1).png" alt="Nashi Yaki Manju" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Nashi Yaki Manju</div>
+            <div class="item-desc">Golden rich filled with shiro-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="piecrust">
+          <div class="item-photo"><img src="images/Manju/Pie Crust.png" alt="Pie Crust Manju" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Pie Crust Manju</div>
+            <div class="item-desc">A delicate and flaky manju filled with shiro-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="taiko">
+          <div class="item-photo"><img src="images/Manju/Taiko.png" alt="Taiko Manju" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Taiko Manju</div>
+            <div class="item-desc">Drum-shaped manju filled with tsubushi-an</div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-id="taiyaki">
+          <div class="item-photo"><img src="images/Manju/taiyaki.png" alt="Taiyaki" /></div>
+          <div class="item-info">
+            <div class="item-price">$2.00</div>
+            <div class="item-name">Taiyaki <span class="item-badge badge-friday">Fri / Sat Only</span></div>
+            <div class="item-desc">Fish-shaped cake with choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fruit Mochi -->
+    <div class="menu-section visible" data-cat="fruit">
+      <div class="cat-intro">
+        <div class="cat-intro-img">
+          <img src="images/Fruit/Strawberry Mochi.png" alt="Fruit Mochi" />
+        </div>
+        <div class="cat-intro-text">
+          <div class="cat-intro-label">Category</div>
+          <div class="cat-intro-title"><img src="icons/Mochi-07.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Fruit Mochi</div>
+          <p class="cat-intro-desc">Whole fresh fruit — a real, uncut strawberry — wrapped in hand-mashed azuki paste and pillowy mochi dough. This is the item Two Ladies Kitchen is most famous for, featured in Food Network, Honolulu Magazine, and countless visitor videos. Seasonal fruits rotate throughout the year. <strong style="color:var(--rose);">Please pre-order</strong> — fruit mochi sells out early and must be enjoyed the same day.</p>
+        </div>
+      </div>
+
+      <div class="fruit-feature">
+        <div style="display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+          <img src="images/Fruit/Strawberry Mochi.png" alt="Strawberry Mochi"
+               style="width:160px;height:160px;object-fit:cover;border-radius:12px;flex-shrink:0;" />
+          <div>
+            <h3>Strawberry Mochi</h3>
+            <div style="display:flex;align-items:center;gap:0.8rem;margin:0.4rem 0 0.2rem;">
+              <span class="fruit-price-big">$3.75</span>
+              <span style="font-size:0.85rem;color:var(--mid);">per piece</span>
+            </div>
+            <p>A whole fresh strawberry covered with tsubushi-an and wrapped in mochi. Also available with koshi-an, shiro-an, or no beans at all.</p>
+            <p class="fruit-note">➕ Additional $0.50 for koshi-an or shiro-an &nbsp;·&nbsp; Please order ahead of time</p>
+            <p class="fruit-note" style="margin-top:0.35rem;">Available by the piece or in boxes of <strong>4, 6, 9, or 12 pieces</strong></p>
+          </div>
+        </div>
+
+        <!-- Filling options -->
+        <div style="margin-top:1.4rem;">
+          <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:0.8rem;">Filling Options</div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <img src="images/Fruit/Strawberry Mochi.png" alt="Tsubushi-an"
+                   style="width:80px;height:80px;object-fit:cover;border-radius:10px;border:2px solid var(--light-purple);" />
+              <div style="font-size:0.75rem;margin-top:0.3rem;color:var(--mid);">Tsubushi-an</div>
+            </div>
+            <div style="text-align:center;">
+              <img src="images/Fruit/Koshi - An.png" alt="Koshi-an"
+                   style="width:80px;height:80px;object-fit:cover;border-radius:10px;border:2px solid var(--light-purple);" />
+              <div style="font-size:0.75rem;margin-top:0.3rem;color:var(--mid);">Koshi-an (+$0.50)</div>
+            </div>
+            <div style="text-align:center;">
+              <img src="images/Fruit/Shiro - An.png" alt="Shiro-an"
+                   style="width:80px;height:80px;object-fit:cover;border-radius:10px;border:2px solid var(--light-purple);" />
+              <div style="font-size:0.75rem;margin-top:0.3rem;color:var(--mid);">Shiro-an (+$0.50)</div>
+            </div>
+            <div style="text-align:center;">
+              <img src="images/Fruit/No Bean.png" alt="No Bean"
+                   style="width:80px;height:80px;object-fit:cover;border-radius:10px;border:2px solid var(--light-purple);" />
+              <div style="font-size:0.75rem;margin-top:0.3rem;color:var(--mid);">No Beans</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seasonal-title">🍊 Seasonal Fruit</div>
+      <div class="seasonal-grid">
+        <div class="seasonal-item">
+          <div style="display:flex;align-items:center;gap:0.6rem;">
+            <img src="images/Fruit/Shortcake.png" alt="Shortcake"
+                 style="width:40px;height:40px;object-fit:cover;border-radius:6px;flex-shrink:0;" />
+            <span class="s-name">Strawberry Shortcake</span>
+          </div>
+          <span class="s-price">$4.25</span>
+        </div>
+        <div class="seasonal-item"><span class="s-name">Persimmon</span><span class="s-price">$2.50</span></div>
+        <div class="seasonal-item"><span class="s-name">Apple</span><span class="s-price">$1.65</span></div>
+        <div class="seasonal-item"><span class="s-name">Mandarin Orange</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item"><span class="s-name">Pear</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item"><span class="s-name">Pumpkin Pie</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item">
+          <div style="display:flex;align-items:center;gap:0.6rem;">
+            <img src="images/Fruit/Grape.png" alt="Grape"
+                 style="width:40px;height:40px;object-fit:cover;border-radius:6px;flex-shrink:0;" />
+            <span class="s-name">Grape</span>
+          </div>
+          <span class="s-price">$1.50</span>
+        </div>
+        <div class="seasonal-item"><span class="s-name">Cherry</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item"><span class="s-name">Peach</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item"><span class="s-name">Poha Berry</span><span class="s-price">$2.00</span></div>
+      </div>
+    </div>
+
+    <!-- Pre-Assortments -->
+    <div class="menu-section visible" data-cat="packs">
+      <div class="cat-intro">
+        <div class="cat-intro-img">
+          <img src="images/lifestyle/mochi-colorful-plates.jpg" alt="Assortment Pack" style="object-position:center;" />
+        </div>
+        <div class="cat-intro-text">
+          <div class="cat-intro-label">Category</div>
+          <div class="cat-intro-title"><img src="icons/Untitled-12.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Pre-Assortment Packs</div>
+          <p class="cat-intro-desc">A curated mix of mochi and manju — perfect for gifting, omiyage, or sharing with the whole family. Choose from 6 to 25 pieces. Each pack is filled with a handpicked variety of our most popular items. Fruit mochi is not included, but everything else is fair game. Pre-ordering is recommended for packs of 12 or more.</p>
+        </div>
+      </div>
+      <p class="cat-subtitle" style="margin-bottom:1.8rem;">Assorted mochi and manju in each pack &nbsp;·&nbsp; Does not include fruit mochi</p>
+
+      <div class="pack-selector">
+        <!-- Size pill buttons -->
+        <div class="pack-size-row">
+          <button class="pack-size-btn" data-pieces="6"  data-price="9.50">6<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn" data-pieces="8"  data-price="12.50">8<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn" data-pieces="10" data-price="15.50">10<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn active" data-pieces="12" data-price="18.50">12<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn" data-pieces="16" data-price="24.50">16<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn" data-pieces="20" data-price="30.50">20<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn" data-pieces="25" data-price="38.00">25<span class="btn-sub">pc</span></button>
+        </div>
+
+        <!-- Detail panel -->
+        <div class="pack-detail" id="packDetail">
+          <div class="pack-detail-left">
+            <div class="pack-detail-num" id="packNum">12</div>
+            <div class="pack-detail-unit">Piece Pack</div>
+          </div>
+          <div class="pack-detail-mid">
+            <div class="pack-detail-price" id="packPrice">$18.50</div>
+            <div class="pack-detail-per" id="packPer">$1.54 / piece</div>
+            <div class="pack-dots" id="packDots"></div>
+          </div>
+          <div class="pack-detail-right">
+            <ul class="pack-includes">
+              <li>Mix of mochi &amp; manju</li>
+              <li>Handcrafted fresh same day</li>
+              <li>Fruit mochi not included</li>
+              <li>Pre-order recommended</li>
+            </ul>
+            <a href="contact.html" class="btn btn-plum" style="width:100%;text-align:center;">Order This Pack</a>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:1.2rem;font-size:0.83rem;color:var(--light-text);font-style:italic;">* Prices subject to change</p>
+    </div>
+  </div>
+
+  <!-- HOW TO ORDER -->
+  <section id="order">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">How to Order</h2>
+        <div class="divider center-divider"></div>
+      </div>
+
+      <div class="order-options">
+        <div class="order-option">
+          <div class="order-option-icon"><img src="icons/Mochi-05.png" style="width:2.4rem;height:2.4rem;object-fit:contain;" class="icon-purple" /></div>
+          <div class="order-option-title">Create Your Own</div>
+          <p class="order-option-desc">Choose your items by the piece. Mix and match any of our contemporary, traditional, manju, or fruit mochi.</p>
+        </div>
+        <div class="order-or">— or —</div>
+        <div class="order-option">
+          <div class="order-option-icon"><img src="icons/Untitled-12.png" style="width:2.4rem;height:2.4rem;object-fit:contain;" class="icon-purple" /></div>
+          <div class="order-option-title">Pick a Pre-Assorted Pack</div>
+          <p class="order-option-desc">Choose a curated box of 6–25 pieces filled with a variety of mochi and manju. Perfect for gifting.</p>
+          <p class="order-option-desc" style="margin-top:0.4rem;font-style:italic;">* Does not include fruit mochi</p>
+        </div>
+      </div>
+
+      <div class="order-note">
+        📅 <strong>Pre-orders recommended</strong> for large quantities, fruit mochi, Yomogi (min. 12 pcs), and Taiyaki (Fri/Sat only). <a href="contact.html" style="color:var(--plum);font-weight:700;">Contact us to place an order →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position:relative;overflow:hidden;">
+  <div class="sakura-deco" style="width:260px;height:260px;top:-40px;right:40px;opacity:0.14;transform:rotate(20deg);"></div>
+  <div class="sakura-deco" style="width:160px;height:160px;bottom:20px;left:-20px;opacity:0.11;transform:rotate(-30deg);"></div>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="images/logo.png" alt="Two Ladies Kitchen" class="footer-logo-img" />Two Ladies Kitchen</div>
+        <div class="footer-tagline">Mochi · Manju · Confectionary</div>
+        <p class="footer-blurb">Handcrafted daily in Hilo, Hawaiʻi since 1996. Made with aloha, one piece at a time.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" class="footer-social-link" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Navigate</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="press.html">Press</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Hours</div>
+        <div class="footer-hours-grid">
+          <span class="footer-hours-day">Tue – Fri</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Saturday</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Sun – Mon</span><span class="footer-hours-time">Closed</span>
+        </div>
+        <div class="footer-address">274 Kīlauea Ave<br />Hilo, HI 96720<br />(808) 961-4766</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Stay in the Loop</div>
+        <p class="footer-email-desc">Get updates on seasonal flavors, new arrivals, and special events.</p>
+        <form class="footer-email-form" id="footerEmailForm">
+          <input type="email" class="footer-email-input" placeholder="your@email.com" required />
+          <button type="submit" class="footer-email-btn">Subscribe ✦</button>
+          <span class="footer-email-success" id="footerEmailSuccess">✓ You're on the list! Mahalo 🌸</span>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Two Ladies Kitchen. All rights reserved. · Prices subject to change.</div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-hero">
+        <div class="modal-img" id="modalImg"></div>
+        <div class="modal-header">
+          <div class="modal-category" id="modalCategory"></div>
+          <div class="modal-name" id="modalName"></div>
+          <div class="modal-price" id="modalPrice"></div>
+          <div class="modal-desc" id="modalDesc"></div>
+          <div class="modal-badges" id="modalBadges"></div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section-title">You Might Also Like</div>
+        <div class="modal-suggestions" id="modalSuggestions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="nav.js"></script>
+  <script>
+    // ── Tab filter ──
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.menu-section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        sections.forEach(s => {
+          s.classList.toggle('visible', f === 'all' || s.dataset.cat === f);
+        });
+      });
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      const btn = document.querySelector(`.tab-btn[data-filter="${cat}"]`);
+      if (btn) btn.click();
+    }
+
+    // ── Interactive Pack Selector ──
+    (function() {
+      const DOT_COLORS = ['#d4a8e0','#e8849a','#9b59b6','#c0365c','#6b2d6b','#e8849a','#d4a8e0'];
+      const packBtns  = document.querySelectorAll('.pack-size-btn');
+      const packDetail = document.getElementById('packDetail');
+      const packNum   = document.getElementById('packNum');
+      const packPrice = document.getElementById('packPrice');
+      const packPer   = document.getElementById('packPer');
+      const packDots  = document.getElementById('packDots');
+
+      function renderDots(n) {
+        packDots.innerHTML = '';
+        for (let i = 0; i < n; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'pack-dot';
+          dot.style.background = DOT_COLORS[i % DOT_COLORS.length];
+          dot.title = 'Piece ' + (i + 1);
+          packDots.appendChild(dot);
+        }
+      }
+
+      function selectPack(btn) {
+        packBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const pieces = parseInt(btn.dataset.pieces);
+        const price  = parseFloat(btn.dataset.price);
+        const per    = (price / pieces).toFixed(2);
+
+        packDetail.classList.add('pack-updating');
+        setTimeout(() => {
+          packNum.textContent   = pieces;
+          packPrice.textContent = '$' + price.toFixed(2);
+          packPer.textContent   = '$' + per + ' / piece';
+          renderDots(pieces);
+          packDetail.classList.remove('pack-updating');
+        }, 150);
+      }
+
+      packBtns.forEach(btn => btn.addEventListener('click', () => selectPack(btn)));
+
+      // Initialize
+      const initBtn = document.querySelector('.pack-size-btn.active');
+      if (initBtn) {
+        const pieces = parseInt(initBtn.dataset.pieces);
+        const price  = parseFloat(initBtn.dataset.price);
+        packNum.textContent   = pieces;
+        packPrice.textContent = '$' + price.toFixed(2);
+        packPer.textContent   = '$' + (price / pieces).toFixed(2) + ' / piece';
+        renderDots(pieces);
+      }
+    })();
+
+    // ── Menu data ──
+    const menuData = {
+      contemporary: {
+        label: 'Contemporary Mochi',
+        items: [
+          { id: 'brownie',      name: 'Brownie',       price: '$1.50', img: 'images/Contemporary Mochi/Brownie.png',       desc: 'Pink mochi filled with a freshly-baked brownie. A perfect blend of chewy mochi and rich, fudgy chocolate.' },
+          { id: 'butter',       name: 'Butter',        price: '$2.00', img: 'images/Contemporary Mochi/Butter Mochi.png',  desc: 'A local, buttery, cake-style mochi. Soft, golden, and rich with the flavor of real butter.' },
+          { id: 'butterfly',    name: 'Butterfly',     price: '$1.50', img: 'images/Contemporary Mochi/butterfly.png',     desc: 'Blue mochi filled with white chocolate and koshi-an. Light and elegant, with a beautiful color.' },
+          { id: 'lilikoi',      name: 'Lilikoi',       price: '$1.50', img: 'images/Contemporary Mochi/lilikoi.png',       desc: 'Passion fruit-flavored mochi bursting with tropical Hawaiian flavor.' },
+          { id: 'marshmallow',  name: 'Marshmallow',   price: '$1.50', img: 'images/Contemporary Mochi/Marshmallow.png',   desc: 'Mochi filled with marshmallows, milk chocolate, and a pinch of tsubushi-an. Sweet and pillowy.' },
+          { id: 'oreo',         name: 'Oreo Cookie',   price: '$1.50', img: 'images/Contemporary Mochi/Oreo.png',          desc: 'Mochi filled with Oreos — a playful twist on the classic cookie wrapped in soft mochi.' },
+          { id: 'peanutbutter', name: 'Peanut Butter', price: '$1.50', img: 'images/Contemporary Mochi/Peanut Butter.png', desc: 'White, daisy-shaped mochi filled with Reese\'s Peanut Butter Cup and shiro-an. Nutty and indulgent.' },
+          { id: 'strawberry',   name: 'Strawberry',    price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png',           desc: 'Mochi with a whole strawberry and tsubushi-an. Also listed under Fruit Mochi.', badges: ['Also in Fruit Mochi'] },
+        ]
+      },
+      traditional: {
+        label: 'Traditional Mochi',
+        items: [
+          { id: 'chichi',    name: 'Chichi',                price: '$1.50', img: 'images/Traditional Mochi/chichi.png',                desc: 'A soft, pink, milk-flavored mochi. Delicate and mildly sweet — a Hawaiian classic.' },
+          { id: 'daifuku',   name: 'Daifuku',               price: '$1.50', img: 'images/Traditional Mochi/daifuku.png',               desc: 'A traditional white mochi filled with tsubushi-an. One of the most beloved Japanese confections.' },
+          { id: 'ginger',    name: 'Ginger',                price: '$1.50', img: 'images/Traditional Mochi/ginger.png',                desc: 'Mochi flavored with ginger puree. Warmly spiced and refreshing.', badges: ['Friday Only'] },
+          { id: 'kamato',    name: 'Kamato',                price: '$2.00', img: 'images/Traditional Mochi/Kinako.png',                desc: 'Mochi steamed with walnuts and tsubushi-an, dipped in kinako. A rich, nutty Okinawan specialty.' },
+          { id: 'nantu',     name: 'Nantu',                 price: '$1.50', img: 'images/Traditional Mochi/nantu.png',                 desc: 'A traditional Okinawan mochi mixed with tsubushi-an, dipped in kinako. Dense, chewy, and earthy.' },
+          { id: 'okinawan',  name: 'Okinawan Sweet Potato', price: '$1.50', img: 'images/Traditional Mochi/okinawan sweet potato.png', desc: 'Sweet potato-an filled mochi, inspired by the beloved purple Okinawan sweet potato.' },
+          { id: 'peach',     name: 'Peach (Momo)',          price: '$1.50', img: 'images/Traditional Mochi/peach.png',                 desc: 'A yellow mochi filled with shiro-an. Shaped like a peach — beautiful and subtly sweet.' },
+          { id: 'plum',      name: 'Plum Flower',           price: '$1.50', img: 'images/Traditional Mochi/plum flower.png',           desc: 'Red, a good-luck colored mochi filled with koshi-an. Often gifted for celebrations.' },
+          { id: 'shiso',     name: 'Shiso',                 price: '$1.50', img: 'images/Traditional Mochi/shiso.png',                 desc: 'Mochi rolled in shiso leaves and filled with koshi-an. Earthy, herbal, and uniquely fragrant.' },
+          { id: 'tsumami',   name: 'Tsumami',               price: '$1.50', img: 'images/Traditional Mochi/tsumami.png',               desc: 'A green, triangle-shaped mochi filled with tsubushi-an. A visually distinctive traditional piece.' },
+          { id: 'yomogi',    name: 'Yomogi',                price: '$1.50', img: 'images/Traditional Mochi/yogomi.png',                desc: 'A mochi scented with mugwort leaf and filled with koshi-an. Delicately herbal and aromatic.', badges: ['Pre-Order · Min. 12 pcs'] },
+        ]
+      },
+      manju: {
+        label: 'Manju (Baked Confection)',
+        items: [
+          { id: 'azuma',     name: 'Azuma Yaki Manju', price: '$2.00', img: 'images/Manju/Azuma.png',      desc: 'Golden rich manju filled with tsubushi-an and topped with walnuts. A satisfying, hearty baked sweet.' },
+          { id: 'furusato',  name: 'Furusato Manju',   price: '$2.00', img: 'images/Manju/Furusato.png',   desc: 'Filled with sweet potato-an, sprinkled with cinnamon. Warm, nostalgic flavors in every bite.' },
+          { id: 'nashi',     name: 'Nashi Yaki Manju', price: '$2.00', img: 'images/Manju/Nashi (1).png',  desc: 'Golden rich manju filled with shiro-an. Light and delicate with a lovely baked crust.' },
+          { id: 'piecrust',  name: 'Pie Crust Manju',  price: '$2.00', img: 'images/Manju/Pie Crust.png',  desc: 'A delicate and flaky manju filled with shiro-an. Buttery pastry meets traditional Japanese filling.' },
+          { id: 'taiko',     name: 'Taiko Manju',      price: '$2.00', img: 'images/Manju/Taiko.png',      desc: 'Drum-shaped manju filled with tsubushi-an. Named after the taiko drum for its distinctive round form.' },
+          { id: 'taiyaki',   name: 'Taiyaki',          price: '$2.00', img: 'images/Manju/taiyaki.png',    desc: 'Fish-shaped cake with your choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese.', badges: ['Fri / Sat Only'] },
+        ]
+      },
+      fruit: {
+        label: 'Fruit Mochi',
+        items: [
+          { id: 'strawberrymochi', name: 'Strawberry Mochi',     price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png', desc: 'A whole fresh strawberry covered with tsubushi-an and wrapped in mochi. Also available with koshi-an, shiro-an, or no beans. Additional $0.50 for koshi-an/shiro-an. Available by the piece or in boxes of 4, 6, 9, or 12.' },
+          { id: 'shortcake',       name: 'Strawberry Shortcake', price: '$4.25', img: 'images/Fruit/Shortcake.png',        desc: 'A seasonal fruit mochi inspired by strawberry shortcake. Rich and indulgent.' },
+          { id: 'grape',           name: 'Grape',                price: '$1.50', img: 'images/Fruit/Grape.png',            desc: 'Seasonal whole grape wrapped in soft mochi.' },
+          { id: 'koshian',         name: 'Koshi-an Option',      price: '+$0.50', img: 'images/Fruit/Koshi - An.png',     desc: 'Upgrade your strawberry mochi with smooth koshi-an filling.' },
+          { id: 'shiroan',         name: 'Shiro-an Option',      price: '+$0.50', img: 'images/Fruit/Shiro - An.png',     desc: 'Upgrade your strawberry mochi with white shiro-an filling.' },
+          { id: 'nobean',          name: 'No Bean Option',       price: '',       img: 'images/Fruit/No Bean.png',         desc: 'Prefer no bean paste? Order your strawberry mochi without any filling.' },
+        ]
+      }
+    };
+
+    // ── Modal logic ──
+    const overlay   = document.getElementById('modalOverlay');
+    const modalImg  = document.getElementById('modalImg');
+    const modalCat  = document.getElementById('modalCategory');
+    const modalName = document.getElementById('modalName');
+    const modalPrc  = document.getElementById('modalPrice');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalBadges = document.getElementById('modalBadges');
+    const modalSugg = document.getElementById('modalSuggestions');
+
+    function openModal(itemId, catKey) {
+      const cat   = menuData[catKey];
+      const item  = cat.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      // Fill header
+      modalCat.textContent  = cat.label;
+      modalName.textContent = item.name;
+      modalPrc.textContent  = item.price;
+      modalDesc.textContent = item.desc;
+
+      // Photo
+      modalImg.innerHTML = `<img src="${item.img}" alt="${item.name}" />`;
+
+      // Badges
+      modalBadges.innerHTML = (item.badges || []).map(b =>
+        `<span class="item-badge ${b.includes('Fri') ? 'badge-friday' : b.includes('Pre') ? 'badge-preorder' : 'badge-seasonal'}">${b}</span>`
+      ).join('');
+
+      // Suggestions — other items in same category (exclude current)
+      const others = cat.items.filter(i => i.id !== itemId).slice(0, 4);
+      modalSugg.innerHTML = others.map(s => `
+        <div class="suggestion-card" onclick="openModal('${s.id}','${catKey}')">
+          <div class="suggestion-img"><img src="${s.img}" alt="${s.name}" /></div>
+          <div class="suggestion-info">
+            <div class="suggestion-name">${s.name}</div>
+            <div class="suggestion-price">${s.price}</div>
+          </div>
+        </div>
+      `).join('');
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Attach click to all menu items
+    document.querySelectorAll('.menu-item').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const catKey = card.closest('.menu-section').dataset.cat;
+        const itemId = card.dataset.id;
+        if (itemId && catKey) openModal(itemId, catKey);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Outer dashed ring -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#c9a0dc" stroke-width="2" stroke-dasharray="6 5" opacity="0.6"/>
+  <!-- Main circle background -->
+  <circle cx="100" cy="100" r="86" fill="#6b2d6b"/>
+  <!-- White mochi pieces -->
+  <!-- Left mochi -->
+  <ellipse cx="80" cy="108" rx="22" ry="26" fill="white" opacity="0.95"/>
+  <!-- Right mochi -->
+  <ellipse cx="118" cy="108" rx="22" ry="26" fill="white" opacity="0.95"/>
+  <!-- Top center mochi -->
+  <ellipse cx="100" cy="86" rx="20" ry="24" fill="white" opacity="0.95"/>
+  <!-- Small highlight dots on each mochi for texture -->
+  <circle cx="92" cy="101" r="3" fill="#e8d0f0" opacity="0.5"/>
+  <circle cx="110" cy="101" r="3" fill="#e8d0f0" opacity="0.5"/>
+  <circle cx="101" cy="80" r="3" fill="#e8d0f0" opacity="0.5"/>
+</svg>

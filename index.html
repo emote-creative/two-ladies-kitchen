@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Ladies Kitchen – Mochi · Manju · Confectionary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=11" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="Two Ladies Kitchen" class="nav-logo-img" />Two Ladies Kitchen</a>
+    <ul class="nav-links" id="navLinks">
+      <li class="has-mega">
+        <a href="menu.html" class="mega-trigger">Menu <span class="nav-caret">▾</span></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <p class="mega-heading">Shop Our Menu</p>
+              <ul class="mega-list">
+                <li><a href="menu.html?cat=contemporary">Contemporary Mochi</a></li>
+                <li><a href="menu.html?cat=traditional">Traditional Mochi</a></li>
+                <li><a href="menu.html?cat=manju">Manju</a></li>
+                <li><a href="menu.html?cat=fruit">Fruit Mochi</a></li>
+                <li><a href="menu.html?cat=packs">Assortment Packs</a></li>
+              </ul>
+            </div>
+            <div class="mega-divider"></div>
+            <div class="mega-col">
+              <p class="mega-heading">Place an Order</p>
+              <ul class="mega-list">
+                <li><a href="menu.html#order">How to Order</a></li>
+                <li><a href="menu.html?cat=packs">Gift Packs</a></li>
+                <li><a href="contact.html">Custom Orders</a></li>
+              </ul>
+            </div>
+            <div class="mega-cards">
+              <a href="menu.html?cat=contemporary" class="mega-card">
+                <div class="mega-card-img"><img src="images/Contemporary Mochi/Brownie.png" alt="Contemporary Mochi" /></div>
+                <span>Contemporary Mochi</span>
+              </a>
+              <a href="menu.html?cat=traditional" class="mega-card">
+                <div class="mega-card-img"><img src="images/Traditional Mochi/daifuku.png" alt="Traditional Mochi" /></div>
+                <span>Traditional Mochi</span>
+              </a>
+              <a href="menu.html?cat=manju" class="mega-card">
+                <div class="mega-card-img"><img src="images/Manju/Azuma.png" alt="Manju" /></div>
+                <span>Manju</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Sakura decorations -->
+    <div class="sakura-deco" style="width:340px;height:340px;top:5%;left:22%;opacity:0.14;transform:rotate(-10deg);"></div>
+    <div class="sakura-deco" style="width:180px;height:180px;bottom:5%;left:44%;opacity:0.20;transform:rotate(30deg);"></div>
+    <div class="sakura-deco" style="width:100px;height:100px;top:8%;left:50%;opacity:0.16;transform:rotate(-40deg);"></div>
+    <!-- Left: text panel -->
+    <div class="hero-left">
+      <span class="hero-badge">✦ Est. 1996 &nbsp;·&nbsp; Hilo, Hawaiʻi ✦</span>
+      <h1 class="hero-title">Two Ladies<br /><em>Kitchen</em></h1>
+      <p class="hero-tagline">Mochi <span>·</span> Manju <span>·</span> Confectionary</p>
+      <p class="hero-desc">Traditional Japanese confections lovingly handcrafted in Hilo, Hawaiʻi. Every piece made fresh daily — never frozen, always made with aloha.</p>
+      <div class="hero-btns">
+        <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+        <a href="contact.html" class="btn btn-outline">Place an Order</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">30+</span>
+          <span class="hero-stat-label">Years in Hilo</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">20+</span>
+          <span class="hero-stat-label">Flavors Daily</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">100%</span>
+          <span class="hero-stat-label">Handcrafted</span>
+        </div>
+      </div>
+    </div>
+    <!-- Right: image panel -->
+    <div class="hero-right">
+      <img src="images/Website Photos/IMG_9907.JPG" alt="Colorful handcrafted mochi rows" />
+      <div class="hero-right-overlay"></div>
+      <div class="hero-float-tag">
+        <span class="hero-float-tag-top">Made Fresh</span>
+        <span class="hero-float-tag-val">Every Day</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERINGS OVERVIEW -->
+  <section class="offerings" style="position:relative;overflow:hidden;">
+    <div class="sakura-deco" style="width:320px;height:320px;top:-60px;right:-60px;opacity:0.32;transform:rotate(-20deg);"></div>
+    <div class="sakura-deco" style="width:200px;height:200px;bottom:-40px;left:-40px;opacity:0.28;transform:rotate(40deg);"></div>
+    <div class="sakura-deco" style="width:80px;height:80px;bottom:60px;right:120px;opacity:0.20;transform:rotate(-15deg);"></div>
+    <div class="container">
+      <div class="section-header center" style="margin-left:auto;margin-right:auto;max-width:700px;position:relative;">
+        <img src="images/Sakura.png" alt="" class="offerings-sakura-bg" />
+        <span class="section-tag">What We Make</span>
+        <h2 class="section-title">Mochi</h2>
+        <div class="divider center-divider"></div>
+        <p class="section-desc">Four categories of handmade Japanese confections, each with its own tradition and flavor.</p>
+      </div>
+
+      <div class="offerings-carousel-wrap" id="offeringsCarousel">
+        <div class="offerings-grid">
+          <a href="menu.html?cat=contemporary" class="offering-card">
+            <div class="offering-photo"><img src="images/Contemporary Mochi/Brownie.png" alt="Contemporary Mochi" /></div>
+            <h3 class="offering-name">Contemporary Mochi</h3>
+            <p class="offering-desc">Modern flavors like Brownie, Lilikoi, Oreo, and Peanut Butter wrapped in soft mochi.</p>
+            <div class="offering-count">8 flavors</div>
+          </a>
+
+          <a href="menu.html?cat=traditional" class="offering-card">
+            <div class="offering-photo"><img src="images/Traditional Mochi/daifuku.png" alt="Traditional Mochi" /></div>
+            <h3 class="offering-name">Traditional Mochi</h3>
+            <p class="offering-desc">Time-honored classics including Daifuku, Nantu, Shiso, Kamato, and Okinawan Sweet Potato.</p>
+            <div class="offering-count">11 flavors</div>
+          </a>
+
+          <a href="menu.html?cat=manju" class="offering-card">
+            <div class="offering-photo"><img src="images/Manju/Azuma.png" alt="Manju" /></div>
+            <h3 class="offering-name">Manju</h3>
+            <p class="offering-desc">Baked Japanese confections — golden, flaky, or drum-shaped, each filled with sweet bean paste.</p>
+            <div class="offering-count">6 varieties</div>
+          </a>
+
+          <a href="menu.html?cat=fruit" class="offering-card">
+            <div class="offering-photo"><img src="images/Fruit/Strawberry Mochi.png" alt="Fruit Mochi" /></div>
+            <h3 class="offering-name">Fruit Mochi</h3>
+            <p class="offering-desc">Fresh whole fruit wrapped in mochi — strawberry and seasonal specialties available by the piece or box.</p>
+            <div class="offering-count">Seasonal selection</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+
+      <div class="offerings-cta" style="position:relative;">
+        <img src="images/Sakura.png" alt="" style="position:absolute;width:240px;height:240px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.35;pointer-events:none;z-index:0;" />
+        <a href="menu.html" class="btn btn-plum" style="position:relative;z-index:1;">See Full Menu & Prices</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY BANNER -->
+  <div class="glossary-banner">
+    <div class="container">
+      <div class="glossary-title">✦ Ingredient Glossary ✦</div>
+      <div class="glossary-grid">
+        <div class="glossary-item"><span class="glossary-term">TSUBUSHI AN</span> — lumpy, sweet, red azuki bean paste</div>
+        <div class="glossary-item"><span class="glossary-term">KOSHI AN</span> — smooth paste of azuki beans</div>
+        <div class="glossary-item"><span class="glossary-term">SHIRO AN</span> — white, smooth lima bean paste</div>
+        <div class="glossary-item"><span class="glossary-term">KINAKO</span> — roasted soybean powder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" style="position:relative;overflow:hidden;">
+    <div class="sakura-deco" style="width:280px;height:280px;top:-60px;left:-60px;opacity:0.18;transform:rotate(-15deg);"></div>
+    <div class="sakura-deco" style="width:200px;height:200px;top:10px;right:-50px;opacity:0.15;transform:rotate(20deg);"></div>
+    <div class="sakura-deco" style="width:140px;height:140px;bottom:-40px;left:200px;opacity:0.13;transform:rotate(35deg);"></div>
+    <div class="sakura-deco" style="width:100px;height:100px;top:50%;right:180px;opacity:0.12;transform:rotate(-25deg);"></div>
+    <div class="container">
+      <div class="section-header center" style="margin-bottom:2.5rem;margin-left:auto;margin-right:auto;max-width:700px;">
+        <span class="section-tag">Watch & See</span>
+        <h2 class="section-title">Two Ladies Kitchen <em>on Camera</em></h2>
+        <div class="divider center-divider"></div>
+        <p class="section-desc" style="text-align:center;">See what goes into every piece — from news features to behind-the-scenes moments.</p>
+      </div>
+      <div class="video-grid">
+        <div class="video-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/fp84YC6M-C0?rel=0&modestbranding=1" title="Two Ladies Kitchen video feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/V0-kAN35Y0Y?rel=0&modestbranding=1" title="Two Ladies Kitchen video feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/QLZChbZ_I-s?rel=0&modestbranding=1" title="Two Ladies Kitchen video feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKS TEASER -->
+  <section class="packs-teaser">
+    <div class="container">
+      <div class="packs-teaser-inner">
+        <div>
+          <span class="section-tag" style="color:#d4a8e0;">Pre-Assortments</span>
+          <h2 class="section-title" style="color:#fff;">Perfect for Gifting</h2>
+          <p style="color:rgba(255,255,255,0.7);max-width:440px;margin-top:0.5rem;">
+            Choose a curated assortment pack from 6 to 25 pieces — a mix of mochi and manju, ready to share.
+          </p>
+          <a href="menu.html?cat=packs" class="btn btn-primary" style="margin-top:1.5rem;">View Packs & Pricing</a>
+        </div>
+        <div class="packs-preview">
+          <div class="pack-preview-item"><span>6 pc</span><strong>$9.50</strong></div>
+          <div class="pack-preview-item"><span>12 pc</span><strong>$18.50</strong></div>
+          <div class="pack-preview-item"><span>20 pc</span><strong>$30.50</strong></div>
+          <div class="pack-preview-item"><span>25 pc</span><strong>$38.00</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM REELS -->
+  <section class="reels-section" style="position:relative;overflow:hidden;">
+    <img src="images/Sakura.png" alt="" style="position:absolute;width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%) rotate(15deg);opacity:0.5;pointer-events:none;z-index:0;" />
+    <div class="reels-header">
+      <span class="section-tag" style="color:#e1306c;">#TwoLadiesKitchen</span>
+      <h2 class="reels-title">Spotted on Instagram</h2>
+      <p class="reels-sub">Our community shares the love — tag us to be featured</p>
+    </div>
+    <div class="reels-grid">
+
+      <a href="https://www.instagram.com/reel/DW0O-Z4AV12/" target="_blank" rel="noopener" class="reel-card">
+        <img src="images/Reel1.png" alt="Mochi boxes assortment" />
+        <div class="reel-overlay">
+          <div class="reel-top"><span class="reel-ig-dot"></span><span class="reel-label">Reels</span></div>
+          <div class="reel-play-btn">▶</div>
+          <div class="reel-bottom">
+            <span class="reel-handle">@twoladieskitchen</span>
+            <span class="reel-caption">#MochiBox #Omiyage</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/reel/DIFs_QoRE79/" target="_blank" rel="noopener" class="reel-card">
+        <img src="images/Reel2.png" alt="Colorful mochi display" />
+        <div class="reel-overlay">
+          <div class="reel-top"><span class="reel-ig-dot"></span><span class="reel-label">Reels</span></div>
+          <div class="reel-play-btn">▶</div>
+          <div class="reel-bottom">
+            <span class="reel-handle">@twoladieskitchen</span>
+            <span class="reel-caption">#HiloMochi #MadeWithAloha</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/reel/DGrcuOaPoLW/" target="_blank" rel="noopener" class="reel-card">
+        <img src="images/Reel3.png" alt="Strawberry Shortcake mochi" />
+        <div class="reel-overlay">
+          <div class="reel-top"><span class="reel-ig-dot"></span><span class="reel-label">Reels</span></div>
+          <div class="reel-play-btn">▶</div>
+          <div class="reel-bottom">
+            <span class="reel-handle">@twoladieskitchen</span>
+            <span class="reel-caption">#StrawberryShortcake #ItsBack</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/reel/C8N65qEvoAq/" target="_blank" rel="noopener" class="reel-card">
+        <img src="images/Reel4.png" alt="Butterfly mochi tray" />
+        <div class="reel-overlay">
+          <div class="reel-top"><span class="reel-ig-dot"></span><span class="reel-label">Reels</span></div>
+          <div class="reel-play-btn">▶</div>
+          <div class="reel-bottom">
+            <span class="reel-handle">@twoladieskitchen</span>
+            <span class="reel-caption">#ButterflyMochi #HawaiiFood</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    <div class="reels-cta">
+      <a href="https://www.instagram.com/twoladieskitchen/" target="_blank" rel="noopener">
+        Follow along on Instagram &nbsp;→
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" style="position:relative;overflow:hidden;">
+    <div class="sakura-deco" style="width:280px;height:280px;top:-20px;right:-40px;opacity:0.28;transform:rotate(15deg);"></div>
+    <div class="sakura-deco" style="width:160px;height:160px;bottom:20px;left:-20px;opacity:0.25;transform:rotate(-25deg);"></div>
+    <div class="sakura-deco" style="width:90px;height:90px;top:50%;right:100px;opacity:0.20;transform:rotate(35deg);"></div>
+    <div class="container">
+      <div class="section-header center" style="max-width:680px;margin:0 auto 3rem;">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="divider center-divider"></div>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I place an order?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>You can place an order by calling us, visiting in person, or sending a message through our <a href="contact.html" style="color:var(--plum);">Contact page</a>. We recommend pre-ordering for large quantities, fruit mochi, and special items like Yomogi to guarantee availability.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need to pre-order, or can I walk in?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Walk-ins are always welcome! However, popular items — especially strawberry and seasonal fruit mochi — tend to sell out early. Pre-ordering is strongly recommended if you have your heart set on something specific or are ordering for a group.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is your mochi fresh or frozen?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Everything is made fresh daily — never frozen. Fruit mochi in particular (especially strawberry) is best enjoyed the same day it's made. Mochi is softest and most flavorful within the first 24 hours.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            When is Taiyaki available?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Taiyaki — our fish-shaped baked confection filled with sweet bean paste — is available on Fridays and Saturdays only. Quantities are limited, so we recommend arriving early or calling ahead.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What's the minimum order for Yomogi mochi?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Yomogi (mugwort) mochi requires a minimum pre-order of 12 pieces and must be ordered in advance. It's a traditional favorite and worth the planning — earthy, fragrant, and unlike anything else we make.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer custom or bulk orders?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Yes! We're happy to accommodate custom and bulk orders for events, weddings, corporate gifts, and omiyage. Please contact us as early as possible — ideally a week or more in advance — to ensure we can fulfill your order.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you ship mochi?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>We don't ship — our mochi is made fresh daily and is best savored in person. A trip to Hilo to pick it up is half the experience! Many visitors plan their Big Island itinerary around a stop at Two Ladies Kitchen.</p>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What's the difference between mochi and manju?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="5 8 10 13 15 8"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p>Mochi is a soft, chewy confection made from glutinous rice, usually filled with sweet bean paste (an) or whole fruit. Manju is a baked Japanese sweet with a tender golden crust — think of it as a soft pastry filled with the same sweet fillings. Both are delicious and both are made here daily.</p>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="position:relative;overflow:hidden;">
+  <div class="sakura-deco" style="width:260px;height:260px;top:-40px;right:40px;opacity:0.12;transform:rotate(20deg);"></div>
+  <div class="sakura-deco" style="width:160px;height:160px;bottom:20px;left:-20px;opacity:0.10;transform:rotate(-30deg);"></div>
+  <div class="sakura-deco" style="width:100px;height:100px;top:40px;left:200px;opacity:0.09;transform:rotate(50deg);"></div>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="images/logo.png" alt="Two Ladies Kitchen" class="footer-logo-img" />Two Ladies Kitchen</div>
+        <div class="footer-tagline">Mochi · Manju · Confectionary</div>
+        <p class="footer-blurb">Handcrafted daily in Hilo, Hawaiʻi since 1996. Made with aloha, one piece at a time.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" class="footer-social-link" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Navigate</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="press.html">Press</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Hours</div>
+        <div class="footer-hours-grid">
+          <span class="footer-hours-day">Tue – Fri</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Saturday</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Sun – Mon</span><span class="footer-hours-time">Closed</span>
+        </div>
+        <div class="footer-address">274 Kīlauea Ave<br />Hilo, HI 96720<br />(808) 961-4766</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Stay in the Loop</div>
+        <p class="footer-email-desc">Get updates on seasonal flavors, new arrivals, and special events.</p>
+        <form class="footer-email-form" id="footerEmailForm">
+          <input type="email" class="footer-email-input" placeholder="your@email.com" required />
+          <button type="submit" class="footer-email-btn">Subscribe ✦</button>
+          <span class="footer-email-success" id="footerEmailSuccess">✓ You're on the list! Mahalo 🌸</span>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Two Ladies Kitchen. All rights reserved. · Prices subject to change.</div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    // Footer email opt-in
+    const footerForm = document.getElementById('footerEmailForm');
+    if (footerForm) {
+      footerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        this.querySelector('input').value = '';
+        this.querySelector('button').style.display = 'none';
+        document.getElementById('footerEmailSuccess').style.display = 'block';
+      });
+    }
+  </script>
+
+  <script src="nav.js"></script>
+  <script>
+    const carousel = document.getElementById('offeringsCarousel');
+    const dots = document.querySelectorAll('#carouselDots .carousel-dot');
+    if (carousel && dots.length) {
+      carousel.addEventListener('scroll', () => {
+        const cards = carousel.querySelectorAll('.offering-card');
+        const scrollLeft = carousel.scrollLeft;
+        const cardWidth = cards[0].offsetWidth + 16;
+        const index = Math.round(scrollLeft / cardWidth);
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
