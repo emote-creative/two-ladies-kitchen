@@ -322,7 +322,7 @@ body > nav {
 
 .hero-title {
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  font-size: clamp(1.6rem, 5.5vw, 5.2rem);
   line-height: 1.0;
   color: #fff;
   margin-bottom: 0.6rem;
@@ -412,9 +412,13 @@ body > nav {
   .hero-left {
     z-index: 1;
     background: transparent;
-    padding: 110px 1.5rem 60px;
+    padding: 80px 1.5rem 30px;
   }
-  .hero-stats { gap: 1.2rem; }
+  .hero-desc { font-size: 0.88rem; margin-bottom: 1.4rem; }
+  .hero-btns { margin-bottom: 1.8rem; gap: 0.6rem; }
+  .hero-tagline { font-size: 0.62rem; margin-bottom: 0.8rem; }
+  .hero-stats { gap: 1rem; }
+  #hero { min-height: 75vh; }
 }
 
 /* ── INSTAGRAM REELS ── */
