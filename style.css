@@ -226,24 +226,27 @@ body > nav {
 }
 
 /* ── HOME HERO ── */
-/* ── HERO (split-screen) ── */
+/* ── HERO (full-bleed) ── */
 #hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 54% 46%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   position: relative;
   overflow: hidden;
   background: #3d1242;
 }
 
 .hero-left {
-  background: #3d1242;
-  padding: 140px 4rem 80px 4rem;
+  background: transparent;
+  padding: 140px 5rem 80px 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 2;
+  grid-area: 1 / 1;
+  max-width: 680px;
 }
 
 /* subtle noise texture overlay */
@@ -251,13 +254,15 @@ body > nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 60%, rgba(107,45,107,0.25) 0%, transparent 65%);
+  background: none;
   pointer-events: none;
 }
 
 .hero-right {
   position: relative;
   overflow: hidden;
+  grid-area: 1 / 1;
+  z-index: 0;
 }
 .hero-right img {
   width: 100%;
@@ -269,8 +274,7 @@ body > nav {
 .hero-right-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #3d1242 0%, rgba(42,13,46,0) 28%),
-              linear-gradient(to top, rgba(42,13,46,0.5) 0%, transparent 40%);
+  background: linear-gradient(to right, rgba(30,8,35,0.82) 0%, rgba(30,8,35,0.55) 50%, rgba(30,8,35,0.15) 100%);
 }
 
 .hero-float-tag {
@@ -324,7 +328,7 @@ body > nav {
   margin-bottom: 0.6rem;
   font-weight: 700;
 }
-.hero-title em { font-style: italic; color: var(--light-purple); font-weight: 400; }
+.hero-title em { font-style: italic; color: #fff; font-weight: 400; }
 
 .hero-tagline {
   font-size: 0.82rem;
@@ -374,13 +378,14 @@ body > nav {
 @media (max-width: 900px) {
   #hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 45vw;
+    grid-template-rows: 1fr;
   }
   .hero-left {
     padding: 120px 2rem 50px;
+    max-width: 100%;
   }
   .hero-right-overlay {
-    background: linear-gradient(to bottom, #3d1242 0%, rgba(61,18,66,0) 40%);
+    background: linear-gradient(to bottom, rgba(30,8,35,0.75) 0%, rgba(30,8,35,0.4) 60%, rgba(30,8,35,0.2) 100%);
   }
 }
 @media (max-width: 500px) {
