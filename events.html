@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Specials – Two Ladies Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=10" />
+  <style>
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .event-card {
+      background: #fff;
+      border: 2px solid #eedeed;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(107,45,107,0.12);
+    }
+    .event-card-badge {
+      background: var(--plum);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+    }
+    .event-card-badge.upcoming { background: #b05090; }
+    .event-card-badge.past { background: #aaa; }
+    .event-card-body { padding: 1.5rem; }
+    .event-card-date {
+      font-size: 0.78rem;
+      color: var(--light-purple);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .event-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+    .event-card-desc {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .event-card-note {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--light-purple);
+      font-style: italic;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .location-card {
+      background: #fff;
+      border: 2px solid #eedeed;
+      border-radius: 16px;
+      padding: 1.25rem 1.4rem;
+      text-align: center;
+    }
+    .location-card-name {
+      font-weight: 700;
+      color: var(--plum);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .location-card-note {
+      font-size: 0.78rem;
+      color: var(--mid);
+    }
+    .location-card-new {
+      display: inline-block;
+      background: #b05090;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="Two Ladies Kitchen" class="nav-logo-img" />Two Ladies Kitchen</a>
+    <ul class="nav-links" id="navLinks">
+      <li class="has-mega">
+        <a href="menu.html" class="mega-trigger">Menu <span class="nav-caret">▾</span></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <p class="mega-heading">Shop Our Menu</p>
+              <ul class="mega-list">
+                <li><a href="menu.html?cat=contemporary">Contemporary Mochi</a></li>
+                <li><a href="menu.html?cat=traditional">Traditional Mochi</a></li>
+                <li><a href="menu.html?cat=manju">Manju</a></li>
+                <li><a href="menu.html?cat=fruit">Fruit Mochi</a></li>
+                <li><a href="menu.html?cat=packs">Assortment Packs</a></li>
+              </ul>
+            </div>
+            <div class="mega-divider"></div>
+            <div class="mega-col">
+              <p class="mega-heading">Place an Order</p>
+              <ul class="mega-list">
+                <li><a href="menu.html#order">How to Order</a></li>
+                <li><a href="menu.html?cat=packs">Gift Packs</a></li>
+                <li><a href="contact.html">Custom Orders</a></li>
+              </ul>
+            </div>
+            <div class="mega-cards">
+              <a href="menu.html?cat=contemporary" class="mega-card">
+                <div class="mega-card-img"><img src="images/Contemporary Mochi/Brownie.png" alt="Contemporary Mochi" /></div>
+                <span>Contemporary Mochi</span>
+              </a>
+              <a href="menu.html?cat=traditional" class="mega-card">
+                <div class="mega-card-img"><img src="images/Traditional Mochi/daifuku.png" alt="Traditional Mochi" /></div>
+                <span>Traditional Mochi</span>
+              </a>
+              <a href="menu.html?cat=manju" class="mega-card">
+                <div class="mega-card-img"><img src="images/Manju/Azuma.png" alt="Manju" /></div>
+                <span>Manju</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="sakura-deco" style="width:300px;height:300px;top:-20px;left:-40px;transform:rotate(-15deg);opacity:0.38;"></div>
+    <div class="sakura-deco" style="width:240px;height:240px;bottom:-20px;right:-30px;transform:rotate(25deg);opacity:0.35;"></div>
+    <div class="sakura-deco" style="width:140px;height:140px;top:15%;right:18%;opacity:0.30;transform:rotate(-40deg);"></div>
+    <img src="icons/Mochi-05.png" class="page-hero-deco d1 icon-white" style="width:140px;opacity:0.1;" />
+    <img src="icons/Untitled-1.png" class="page-hero-deco d2 icon-white" style="width:160px;opacity:0.1;" />
+    <span class="section-tag">Mark Your Calendar</span>
+    <h1 class="page-hero-title">Events & <em>Specials</em></h1>
+    <p class="page-hero-desc">Holiday flavors, limited-time specials, and seasonal treats — follow us on Instagram for the latest updates.</p>
+  </div>
+
+  <!-- UPCOMING & HOLIDAY SPECIALS -->
+  <section style="padding:5rem 0;">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Holiday Specials</span>
+        <h2 class="section-title">Seasonal <em>Favorites</em></h2>
+        <div class="divider center-divider"></div>
+        <p style="color:var(--mid);font-size:0.95rem;max-width:560px;margin:0 auto;">We create special flavors and gift sets for holidays throughout the year. Check back here or follow us on Instagram for announcements.</p>
+      </div>
+
+      <div class="events-grid">
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">New Year's</div>
+          <div class="event-card-body">
+            <div class="event-card-date">January 1</div>
+            <div class="event-card-title">New Year's Mochi</div>
+            <p class="event-card-desc">Ring in the New Year with special assortments and limited-edition flavors. A beloved tradition — mochi for good luck in the year ahead.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Valentine's Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">February 14</div>
+            <div class="event-card-title">Valentine's Day Specials</div>
+            <p class="event-card-desc">Sweeten your Valentine's Day with special mochi flavors and gift packs. Perfect for sharing with someone you love.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Girls' Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">March 3 · Hinamatsuri</div>
+            <div class="event-card-title">Girls' Day Mochi</div>
+            <p class="event-card-desc">Celebrate Hinamatsuri with seasonal flavors and beautifully presented mochi in honor of the Japanese festival of girls.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Mother's Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">Second Sunday in May</div>
+            <div class="event-card-title">Mother's Day Gift Sets</div>
+            <p class="event-card-desc">Treat Mom to a beautifully curated mochi assortment. Our gift packs make the perfect Mother's Day present — handcrafted with aloha.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Boys' Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">May 5 · Children's Day</div>
+            <div class="event-card-title">Boys' Day Mochi</div>
+            <p class="event-card-desc">Celebrate Kodomo no Hi with special seasonal flavors in honor of Children's Day — a cherished holiday in Japanese and local Hawaiian culture.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Father's Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">Third Sunday in June</div>
+            <div class="event-card-title">Father's Day Gift Sets</div>
+            <p class="event-card-desc">Show Dad some love with a handcrafted mochi assortment. A thoughtful gift made fresh the same day.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">National Mochi Day</div>
+          <div class="event-card-body">
+            <div class="event-card-date">August 21</div>
+            <div class="event-card-title">National Mochi Day</div>
+            <p class="event-card-desc">Our favorite day of the year! We celebrate with special flavors and limited offerings in honor of the beloved confection we've been making since 1996.</p>
+            <p class="event-card-note">Follow us on Instagram for details</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-badge upcoming">Christmas</div>
+          <div class="event-card-body">
+            <div class="event-card-date">December 25</div>
+            <div class="event-card-title">Christmas Specials</div>
+            <p class="event-card-desc">Spread holiday cheer with seasonal mochi flavors and festive gift packs. A delicious alternative to the usual holiday sweets.</p>
+            <p class="event-card-note">Call to pre-order: <a href="tel:+18089614766" style="color:var(--plum);font-weight:600;">(808) 961-4766</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:0.85rem;color:var(--light-text);font-style:italic;">✦ Follow <a href="https://www.instagram.com/twoladieskitchen_hilo/" target="_blank" rel="noopener" style="color:var(--plum);">@twoladieskitchen_hilo</a> on Instagram for the latest announcements on holiday specials and limited flavors.</p>
+    </div>
+  </section>
+
+  <!-- WHERE TO FIND OUR MOCHI -->
+  <section style="padding:5rem 0;background:var(--soft-bg);">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Mochi Near You</span>
+        <h2 class="section-title">Where to Find <em>Our Mochi</em></h2>
+        <div class="divider center-divider"></div>
+        <p style="color:var(--mid);font-size:0.95rem;max-width:560px;margin:0 auto;">Our 6-piece assorted boxes are available at these locations across Hawaiʻi Island.</p>
+      </div>
+
+      <div class="locations-grid">
+
+        <div class="location-card">
+          <div class="location-card-name">KTA Puainako</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-name">KTA Downtown Hilo</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-name">KTA Waimea</div>
+          <div class="location-card-note">Wednesday, Friday & Saturday</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-name">KTA Waikoloa</div>
+          <div class="location-card-note">Wednesday, Friday & Saturday</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-name">Safeway Hilo</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-name">K. Takata Store Kohala</div>
+          <div class="location-card-note">Thursday only</div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card-new">New</div>
+          <div class="location-card-name">Keaukaha General Store</div>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:0.85rem;color:var(--light-text);font-style:italic;">* Availability may vary. Call the store directly to confirm stock.</p>
+    </div>
+  </section>
+
+  <footer style="position:relative;overflow:hidden;">
+  <div class="sakura-deco" style="width:260px;height:260px;top:-40px;right:40px;opacity:0.14;transform:rotate(20deg);"></div>
+  <div class="sakura-deco" style="width:160px;height:160px;bottom:20px;left:-20px;opacity:0.11;transform:rotate(-30deg);"></div>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="images/logo.png" alt="Two Ladies Kitchen" class="footer-logo-img" />Two Ladies Kitchen</div>
+        <div class="footer-tagline">Mochi · Manju · Confectionary</div>
+        <p class="footer-blurb">Handcrafted daily in Hilo, Hawaiʻi since 1996. Made with aloha, one piece at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/twoladieskitchen_hilo/" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" class="footer-social-link" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Navigate</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Hours</div>
+        <div class="footer-hours-grid">
+          <span class="footer-hours-day">Tue – Fri</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Saturday</span><span class="footer-hours-time">10am – 4pm</span>
+          <span class="footer-hours-day">Sun – Mon</span><span class="footer-hours-time">Closed</span>
+        </div>
+        <div class="footer-address">274 Kīlauea Ave<br />Hilo, HI 96720<br />(808) 961-4766</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-heading">Stay in the Loop</div>
+        <p class="footer-email-desc">Get updates on seasonal flavors, new arrivals, and special events.</p>
+        <form class="footer-email-form" id="footerEmailForm">
+          <input type="email" class="footer-email-input" placeholder="your@email.com" required />
+          <button type="submit" class="footer-email-btn">Subscribe ✦</button>
+          <span class="footer-email-success" id="footerEmailSuccess">✓ You're on the list! Mahalo 🌸</span>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Two Ladies Kitchen. All rights reserved. · Prices subject to change.</div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    document.getElementById('footerEmailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('footerEmailSuccess').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
