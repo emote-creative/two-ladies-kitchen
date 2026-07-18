@@ -153,7 +153,7 @@
         </div>
 
         <div class="menu-item" data-id="marshmallow">
-          <div class="item-photo"><img src="images/Contemporary Mochi/Marshmallow.png" alt="Marshmallow Mochi" /></div>
+          <div class="item-photo"><img src="images/Contemporary Mochi/marshmellow.png" alt="Marshmallow Mochi" /></div>
           <div class="item-info">
             <div class="item-price">$1.50</div>
             <div class="item-name">Marshmallow</div>
@@ -316,7 +316,7 @@
         <div class="cat-intro-text">
           <div class="cat-intro-label">Category</div>
           <div class="cat-intro-title"><img src="icons/Mochi-06.png" class="inline-icon icon-purple" style="width:1.1rem;height:1.1rem;" /> Manju <small style="font-size:0.85rem;color:var(--mid);font-weight:400;">(Baked Confection)</small></div>
-          <p class="cat-intro-desc">Traditional Japanese baked sweets with tender golden crusts and sweet bean fillings. Unlike mochi, manju are baked rather than steamed or pounded — resulting in a soft pastry exterior that contrasts beautifully with the rich an filling inside. Our Taiyaki, shaped like the iconic Japanese fish, is a weekend-only special that draws lines on its own.</p>
+          <p class="cat-intro-desc">Traditional Japanese baked sweets with tender golden crusts and sweet bean fillings. Unlike mochi, manju are baked rather than steamed or pounded — resulting in a soft pastry exterior that contrasts beautifully with the rich an filling inside. Our Taiyaki — coconut milk flavored and shaped like the iconic Japanese fish — is available Wednesday, Friday, and Saturday.</p>
         </div>
       </div>
       <div class="menu-list">
@@ -348,12 +348,12 @@
           </div>
         </div>
 
-        <div class="menu-item" data-id="piecrust">
-          <div class="item-photo"><img src="images/Manju/Pie Crust.png" alt="Pie Crust Manju" /></div>
+        <div class="menu-item" data-id="marshmallowmanju">
+          <div class="item-photo"><img src="images/Manju/Marshmallow.png" alt="Marshmallow Manju" /></div>
           <div class="item-info">
             <div class="item-price">$2.00</div>
-            <div class="item-name">Pie Crust Manju</div>
-            <div class="item-desc">A delicate and flaky manju filled with shiro-an</div>
+            <div class="item-name">Marshmallow Manju</div>
+            <div class="item-desc">Soft baked manju filled with sweet marshmallow</div>
           </div>
         </div>
 
@@ -361,7 +361,7 @@
           <div class="item-photo"><img src="images/Manju/Taiko.png" alt="Taiko Manju" /></div>
           <div class="item-info">
             <div class="item-price">$2.00</div>
-            <div class="item-name">Taiko Manju</div>
+            <div class="item-name">Taiko Manju <span class="item-badge badge-friday">Tue / Thu / Sat</span></div>
             <div class="item-desc">Drum-shaped manju filled with tsubushi-an</div>
           </div>
         </div>
@@ -370,8 +370,8 @@
           <div class="item-photo"><img src="images/Manju/taiyaki.png" alt="Taiyaki" /></div>
           <div class="item-info">
             <div class="item-price">$2.00</div>
-            <div class="item-name">Taiyaki <span class="item-badge badge-friday">Fri / Sat Only</span></div>
-            <div class="item-desc">Fish-shaped cake with choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese</div>
+            <div class="item-name">Taiyaki <span class="item-badge badge-friday">Wed / Fri / Sat</span></div>
+            <div class="item-desc">Fish-shaped cake — coconut milk flavored — with choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese</div>
           </div>
         </div>
 
@@ -500,6 +500,9 @@
           <button class="pack-size-btn" data-pieces="16" data-price="24.50">16<span class="btn-sub">pc</span></button>
           <button class="pack-size-btn" data-pieces="20" data-price="30.50">20<span class="btn-sub">pc</span></button>
           <button class="pack-size-btn" data-pieces="25" data-price="38.00">25<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn event-platter" data-pieces="30" data-price="0">30<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn event-platter" data-pieces="50" data-price="0">50<span class="btn-sub">pc</span></button>
+          <button class="pack-size-btn event-platter" data-pieces="75" data-price="0">75<span class="btn-sub">pc</span></button>
         </div>
 
         <!-- Detail panel -->
@@ -554,7 +557,7 @@
       </div>
 
       <div class="order-note">
-        📅 <strong>Pre-orders recommended</strong> for large quantities, fruit mochi, Yomogi (min. 12 pcs), and Taiyaki (Fri/Sat only). <a href="tel:+18089614766" style="color:var(--plum);font-weight:700;">Call us to place an order → (808) 961-4766</a>
+        📅 <strong>Pre-orders recommended</strong> for large quantities, fruit mochi, Yomogi (min. 12 pcs), and Taiyaki (Wed/Fri/Sat only). <a href="tel:+18089614766" style="color:var(--plum);font-weight:700;">Call us to place an order → (808) 961-4766</a>
       </div>
     </div>
   </section>
@@ -675,14 +678,19 @@
         btn.classList.add('active');
         const pieces = parseInt(btn.dataset.pieces);
         const price  = parseFloat(btn.dataset.price);
-        const per    = (price / pieces).toFixed(2);
+        const isEvent = btn.classList.contains('event-platter');
 
         packDetail.classList.add('pack-updating');
         setTimeout(() => {
           packNum.textContent   = pieces;
-          packPrice.textContent = '$' + price.toFixed(2);
-          packPer.textContent   = '$' + per + ' / piece';
-          renderDots(pieces);
+          if (isEvent) {
+            packPrice.textContent = 'Call for Pricing';
+            packPer.textContent   = 'Event Platter — call (808) 961-4766';
+          } else {
+            packPrice.textContent = '$' + price.toFixed(2);
+            packPer.textContent   = '$' + (price / pieces).toFixed(2) + ' / piece';
+          }
+          renderDots(Math.min(pieces, 25));
           packDetail.classList.remove('pack-updating');
         }, 150);
       }
@@ -710,7 +718,7 @@
           { id: 'butter',       name: 'Butter',        price: '$2.00', img: 'images/Contemporary Mochi/Butter Mochi.png',  desc: 'A local, buttery, cake-style mochi. Soft, golden, and rich with the flavor of real butter.' },
           { id: 'butterfly',    name: 'Butterfly',     price: '$1.50', img: 'images/Contemporary Mochi/butterfly.png',     desc: 'Blue mochi filled with white chocolate and koshi-an. Light and elegant, with a beautiful color.' },
           { id: 'lilikoi',      name: 'Lilikoi',       price: '$1.50', img: 'images/Contemporary Mochi/lilikoi.png',       desc: 'Passion fruit-flavored mochi bursting with tropical Hawaiian flavor.' },
-          { id: 'marshmallow',  name: 'Marshmallow',   price: '$1.50', img: 'images/Contemporary Mochi/Marshmallow.png',   desc: 'Mochi filled with marshmallows, milk chocolate, and a pinch of tsubushi-an. Sweet and pillowy.' },
+          { id: 'marshmallow',  name: 'Marshmallow',   price: '$1.50', img: 'images/Contemporary Mochi/marshmellow.png',   desc: 'Mochi filled with marshmallows, milk chocolate, and a pinch of tsubushi-an. Sweet and pillowy.' },
           { id: 'oreo',         name: 'Oreo Cookie',   price: '$1.50', img: 'images/Contemporary Mochi/Oreo.png',          desc: 'Mochi filled with Oreos — a playful twist on the classic cookie wrapped in soft mochi.' },
           { id: 'peanutbutter', name: 'Peanut Butter', price: '$1.50', img: 'images/Contemporary Mochi/Peanut Butter.png', desc: 'White, daisy-shaped mochi filled with Reese\'s Peanut Butter Cup and shiro-an. Nutty and indulgent.' },
           { id: 'strawberry',   name: 'Strawberry',    price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png',           desc: 'Mochi with a whole strawberry and tsubushi-an. Also listed under Fruit Mochi.', badges: ['Also in Fruit Mochi'] },
@@ -738,9 +746,9 @@
           { id: 'azuma',     name: 'Azuma Yaki Manju', price: '$2.00', img: 'images/Manju/Azuma.png',      desc: 'Golden rich manju filled with tsubushi-an and topped with walnuts. A satisfying, hearty baked sweet.' },
           { id: 'furusato',  name: 'Furusato Manju',   price: '$2.00', img: 'images/Manju/Furusato.png',   desc: 'Filled with sweet potato-an, sprinkled with cinnamon. Warm, nostalgic flavors in every bite.' },
           { id: 'nashi',     name: 'Nashi Yaki Manju', price: '$2.00', img: 'images/Manju/Nashi (1).png',  desc: 'Golden rich manju filled with shiro-an. Light and delicate with a lovely baked crust.' },
-          { id: 'piecrust',  name: 'Pie Crust Manju',  price: '$2.00', img: 'images/Manju/Pie Crust.png',  desc: 'A delicate and flaky manju filled with shiro-an. Buttery pastry meets traditional Japanese filling.' },
-          { id: 'taiko',     name: 'Taiko Manju',      price: '$2.00', img: 'images/Manju/Taiko.png',      desc: 'Drum-shaped manju filled with tsubushi-an. Named after the taiko drum for its distinctive round form.' },
-          { id: 'taiyaki',   name: 'Taiyaki',          price: '$2.00', img: 'images/Manju/taiyaki.png',    desc: 'Fish-shaped cake with your choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese.', badges: ['Fri / Sat Only'] },
+          { id: 'marshmallowmanju', name: 'Marshmallow Manju', price: '$2.00', img: 'images/Manju/Marshmallow.png', desc: 'Soft baked manju filled with sweet marshmallow.' },
+          { id: 'taiko',     name: 'Taiko Manju',      price: '$2.00', img: 'images/Manju/Taiko.png',      desc: 'Drum-shaped manju filled with tsubushi-an. Named after the taiko drum for its distinctive round form.', badges: ['Tue / Thu / Sat'] },
+          { id: 'taiyaki',   name: 'Taiyaki',          price: '$2.00', img: 'images/Manju/taiyaki.png',    desc: 'Coconut milk flavored fish-shaped cake with your choice of tsubushi-an, strawberry jam & cream cheese, or cinnamon & cream cheese.', badges: ['Wed / Fri / Sat'] },
         ]
       },
       fruit: {

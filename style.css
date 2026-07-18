@@ -2232,6 +2232,22 @@ footer {
 
 .pack-size-btn.active .btn-sub { color: rgba(255,255,255,0.6); }
 
+.pack-size-btn.event-platter {
+  border-style: dashed;
+  border-color: var(--plum);
+  color: var(--plum);
+  background: transparent;
+  font-size: 0.75rem;
+}
+.pack-size-btn.event-platter::after {
+  content: '✦';
+  display: block;
+  font-size: 0.55rem;
+  color: var(--light-purple);
+  margin-top: -2px;
+}
+.pack-size-btn.event-platter.active { background: var(--plum); color: #fff; }
+
 .pack-detail {
   background: #fff;
   border: 2px solid #eedeed;
