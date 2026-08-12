@@ -2702,12 +2702,14 @@ footer {
 
   .mega-heading { color: #e8d0f5; margin-bottom: 0.4rem; }
 
-  .mega-list a {
-    color: #fff;
+  .mega-list a,
+  .has-mega .mega-list a {
+    color: #fff !important;
     font-size: 0.88rem;
   }
 
-  .mega-list a:hover { color: #e8d0f5; }
+  .mega-list a:hover,
+  .has-mega .mega-list a:hover { color: #e8d0f5 !important; }
 
   .nav-links.open > li > a {
     color: #fff;
