@@ -27,7 +27,9 @@
       "Bash(cp ~/Desktop/\"Screenshot 2026-06-05 at 7.11.49 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-colorful-tray.png\")",
       "Bash(cp ~/Desktop/\"Screenshot 2026-06-05 at 7.12.01 PM.png\" \"/Users/livaguano/Two Ladies Kitchen/images/reel-boxes.png\")",
       "Bash(mkdir -p \"/Users/livaguano/Two Ladies Kitchen/.claude\" && ls \"/Users/livaguano/Two Ladies Kitchen/.claude/\")",
-      "Bash(sed -i '' 's|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"faq.html\">FAQ</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)"
+      "Bash(sed -i '' 's|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"faq.html\">FAQ</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
+      "Bash(python3 -m http.server 3457)",
+      "Bash(kill 4142)"
     ]
   }
 }
