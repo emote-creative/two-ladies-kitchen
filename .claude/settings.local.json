@@ -33,7 +33,9 @@
       "Bash(kill 4751)",
       "Bash(sed -i '' 's/style\\\\.css?v=10/style.css?v=11/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
       "Bash(sed -i '' 's/style\\\\.css?v=11/style.css?v=12/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
