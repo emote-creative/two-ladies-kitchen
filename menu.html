@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
 
@@ -65,6 +65,42 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <!-- FILLING PICKER -->
+  <div id="fillingOverlay" class="filling-overlay" style="display:none;">
+    <div class="filling-modal">
+      <div class="filling-modal-header">
+        <div class="filling-modal-title">Choose Your Filling</div>
+        <button id="fillingClose" class="filling-close">✕</button>
+      </div>
+      <div class="filling-options">
+        <button class="filling-option" onclick="addStrawberryWithFilling('tsubushi','Tsubushi-an','$3.75')">
+          <img src="images/Fruit/Strawberry Mochi.png" alt="Tsubushi-an" />
+          <div class="filling-option-name">Tsubushi-an</div>
+          <div class="filling-option-desc">Chunky red azuki paste</div>
+          <div class="filling-option-price">$3.75</div>
+        </button>
+        <button class="filling-option" onclick="addStrawberryWithFilling('koshian','Koshi-an','$4.25')">
+          <img src="images/Fruit/Koshi - An.png" alt="Koshi-an" />
+          <div class="filling-option-name">Koshi-an</div>
+          <div class="filling-option-desc">Smooth red azuki paste</div>
+          <div class="filling-option-price">$4.25</div>
+        </button>
+        <button class="filling-option" onclick="addStrawberryWithFilling('shiroan','Shiro-an','$4.25')">
+          <img src="images/Fruit/Shiro - An.png" alt="Shiro-an" />
+          <div class="filling-option-name">Shiro-an</div>
+          <div class="filling-option-desc">White lima bean paste</div>
+          <div class="filling-option-price">$4.25</div>
+        </button>
+        <button class="filling-option" onclick="addStrawberryWithFilling('nobean','No Bean','$3.75')">
+          <img src="images/Fruit/No Bean.png" alt="No Bean" />
+          <div class="filling-option-name">No Bean</div>
+          <div class="filling-option-desc">Just mochi and strawberry</div>
+          <div class="filling-option-price">$3.75</div>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ORDER DRAWER -->
   <div id="orderDrawerOverlay" class="order-drawer-overlay"></div>
@@ -458,6 +494,9 @@
                style="width:160px;height:160px;object-fit:cover;border-radius:12px;flex-shrink:0;" />
           <div>
             <h3>Strawberry Mochi</h3>
+            <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin:0.5rem 0 0.6rem;">
+              <span class="item-badge badge-seasonal">Pre-Order · Sells Out Early</span>
+            </div>
             <div style="display:flex;align-items:center;gap:0.8rem;margin:0.4rem 0 0.2rem;">
               <span class="fruit-price-big">$3.75</span>
               <span style="font-size:0.85rem;color:var(--mid);">per piece</span>
@@ -465,6 +504,7 @@
             <p>A whole fresh strawberry covered with tsubushi-an and wrapped in mochi. Also available with koshi-an, shiro-an, or no beans at all.</p>
             <p class="fruit-note">➕ Additional $0.50 for koshi-an or shiro-an &nbsp;·&nbsp; Please order ahead of time</p>
             <p class="fruit-note" style="margin-top:0.35rem;">Available by the piece or in boxes of <strong>4, 6, 9, or 12 pieces</strong></p>
+            <button class="add-to-list-btn" style="margin-top:1rem;" onclick="openFillingPicker();event.stopPropagation();">+ Add to My List</button>
           </div>
         </div>
 
@@ -498,23 +538,23 @@
 
       <div class="seasonal-title">🍊 Seasonal Fruit</div>
       <div class="seasonal-grid">
-        <div class="seasonal-item"><span class="s-name">Persimmon</span><span class="s-price">$2.50</span></div>
-        <div class="seasonal-item"><span class="s-name">Envy Apple</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Li Hing Mui Apple</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Nectarine</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Mandarin Orange</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Pear</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Grape</span><span class="s-price">$1.50</span></div>
-        <div class="seasonal-item"><span class="s-name">Cotton Candy Grape</span><span class="s-price">$1.50</span></div>
-        <div class="seasonal-item"><span class="s-name">Cherry</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Peach</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Poha Berry</span><span class="s-price">$2.00</span></div>
+        <div class="seasonal-item"><span class="s-name">Persimmon</span><span class="s-price">$2.50</span><button class="s-add-btn" onclick="addToList('s-persimmon')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Envy Apple</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-envyapple')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Li Hing Mui Apple</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-lihingapple')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Nectarine</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-nectarine')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Mandarin Orange</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-mandarin')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Pear</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-pear')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Grape</span><span class="s-price">$1.50</span><button class="s-add-btn" onclick="addToList('s-grape')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Cotton Candy Grape</span><span class="s-price">$1.50</span><button class="s-add-btn" onclick="addToList('s-ccgrape')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Cherry</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-cherry')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Peach</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-peach')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Poha Berry</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-poha')">+</button></div>
       </div>
 
       <div class="seasonal-title" style="margin-top:2rem;">✦ Seasonal Items</div>
       <div class="seasonal-grid">
-        <div class="seasonal-item"><span class="s-name">Pumpkin Pie</span><span class="s-price">$2.00</span></div>
-        <div class="seasonal-item"><span class="s-name">Kokoro</span><span class="s-price">$1.50</span></div>
+        <div class="seasonal-item"><span class="s-name">Pumpkin Pie</span><span class="s-price">$2.00</span><button class="s-add-btn" onclick="addToList('s-pumpkinpie')">+</button></div>
+        <div class="seasonal-item"><span class="s-name">Kokoro</span><span class="s-price">$1.50</span><button class="s-add-btn" onclick="addToList('s-kokoro')">+</button></div>
       </div>
     </div>
 
@@ -777,7 +817,7 @@
           { id: 'peanutbutter', name: 'Peanut Butter', price: '$1.50', img: 'images/Contemporary Mochi/Peanut Butter.png', desc: 'White, daisy-shaped mochi filled with Reese\'s Peanut Butter Cup and shiro-an. Nutty and indulgent.' },
           { id: 'goldenoreo',   name: 'Golden Oreo',         price: '$1.50', img: 'images/Contemporary Mochi/golden oreo.png',    desc: 'Golden Oreo wrapped in a custom golden-colored mochi.' },
           { id: 'shortcake',    name: 'Strawberry Shortcake', price: '$4.25', img: 'images/Fruit/Shortcake.png',                  desc: 'Strawberry shortcake-inspired mochi, available year-round.' },
-          { id: 'strawberry',   name: 'Strawberry',    price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png',           desc: 'Mochi with a whole strawberry and tsubushi-an. Also listed under Fruit Mochi.', badges: ['Also in Fruit Mochi'] },
+          { id: 'strawberry',   name: 'Strawberry',    price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png',           desc: 'Mochi with a whole strawberry and tsubushi-an. Also listed under Fruit Mochi.', badges: ['Also in Fruit Mochi', 'Pre-Order · Sells Out Early'] },
         ]
       },
       traditional: {
@@ -810,9 +850,22 @@
       fruit: {
         label: 'Fruit Mochi',
         items: [
-          { id: 'strawberrymochi', name: 'Strawberry Mochi',     price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png', desc: 'A whole fresh strawberry covered with tsubushi-an and wrapped in mochi. Also available with koshi-an, shiro-an, or no beans. Additional $0.50 for koshi-an/shiro-an. Available by the piece or in boxes of 4, 6, 9, or 12.' },
-          { id: 'shortcake',       name: 'Strawberry Shortcake', price: '$4.25', img: 'images/Fruit/Shortcake.png',        desc: 'A seasonal fruit mochi inspired by strawberry shortcake. Rich and indulgent.' },
-          { id: 'grape',           name: 'Grape',                price: '$1.50', img: 'images/Fruit/Grape.png',            desc: 'Seasonal whole grape wrapped in soft mochi.' },
+          { id: 'strawberrymochi', name: 'Strawberry Mochi',     price: '$3.75', img: 'images/Fruit/Strawberry Mochi.png', desc: 'A whole fresh strawberry covered with tsubushi-an and wrapped in mochi. Also available with koshi-an, shiro-an, or no beans. Additional $0.50 for koshi-an/shiro-an. Available by the piece or in boxes of 4, 6, 9, or 12.', badges: ['Pre-Order · Sells Out Early'] },
+          { id: 's-persimmon',  name: 'Persimmon',          price: '$2.50', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-envyapple',  name: 'Envy Apple',         price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-lihingapple',name: 'Li Hing Mui Apple',  price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-nectarine',  name: 'Nectarine',          price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-mandarin',   name: 'Mandarin Orange',    price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-pear',       name: 'Pear',               price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-grape',      name: 'Grape',              price: '$1.50', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-ccgrape',    name: 'Cotton Candy Grape', price: '$1.50', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-cherry',     name: 'Cherry',             price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-peach',      name: 'Peach',              price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-poha',       name: 'Poha Berry',         price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-pumpkinpie', name: 'Pumpkin Pie',        price: '$2.00', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 's-kokoro',     name: 'Kokoro',             price: '$1.50', img: '', desc: '', badges: ['Seasonal · Pre-Order'] },
+          { id: 'shortcake',       name: 'Strawberry Shortcake', price: '$4.25', img: 'images/Fruit/Shortcake.png',        desc: 'A seasonal fruit mochi inspired by strawberry shortcake. Rich and indulgent.', badges: ['Pre-Order · Sells Out Early'] },
+          { id: 'grape',           name: 'Grape',                price: '$1.50', img: 'images/Fruit/Grape.png',            desc: 'Seasonal whole grape wrapped in soft mochi.', badges: ['Seasonal · Pre-Order'] },
           { id: 'koshian',         name: 'Koshi-an Option',      price: '+$0.50', img: 'images/Fruit/Koshi - An.png',     desc: 'Upgrade your strawberry mochi with smooth koshi-an filling.' },
           { id: 'shiroan',         name: 'Shiro-an Option',      price: '+$0.50', img: 'images/Fruit/Shiro - An.png',     desc: 'Upgrade your strawberry mochi with white shiro-an filling.' },
           { id: 'nobean',          name: 'No Bean Option',       price: '',       img: 'images/Fruit/No Bean.png',         desc: 'Prefer no bean paste? Order your strawberry mochi without any filling.' },
@@ -898,6 +951,45 @@
         if (item) return item;
       }
       return null;
+    }
+
+    function openFillingPicker() {
+      document.getElementById('fillingOverlay').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFillingPicker() {
+      document.getElementById('fillingOverlay').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('fillingClose').addEventListener('click', closeFillingPicker);
+    document.getElementById('fillingOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeFillingPicker();
+    });
+
+    function addStrawberryWithFilling(fillingId, fillingName, price) {
+      closeFillingPicker();
+      const id = 'strawberry-' + fillingId;
+      const existing = orderList.find(i => i.id === id);
+      if (existing) {
+        existing.qty++;
+      } else {
+        orderList.push({
+          id,
+          name: 'Strawberry Mochi (' + fillingName + ')',
+          price,
+          qty: 1,
+          badges: ['Pre-Order · Sells Out Early']
+        });
+      }
+      saveOrder();
+      updateFab();
+      renderDrawer();
+      // open drawer to confirm
+      document.getElementById('orderDrawer').classList.add('open');
+      document.getElementById('orderDrawerOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
 
     function addToList(itemId) {

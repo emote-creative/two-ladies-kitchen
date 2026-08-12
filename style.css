@@ -1113,8 +1113,11 @@ body > nav {
 
 .seasonal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.6rem;
+}
+@media (max-width: 480px) {
+  .seasonal-grid { grid-template-columns: 1fr; }
 }
 
 .seasonal-item {
@@ -3068,4 +3071,112 @@ footer {
   border-radius: 20px;
   padding: 0.15rem 0.55rem;
   margin: 0.2rem 0 0.15rem;
+}
+
+/* Seasonal item add button */
+.s-name { flex: 1; }
+.s-price { margin-left: 0.75rem; white-space: nowrap; margin-right: 0.6rem; }
+.s-add-btn {
+  margin-left: auto;
+  background: var(--plum);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-add-btn:hover { background: var(--rose); transform: scale(1.1); }
+
+/* Filling Picker Modal */
+.filling-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (min-width: 601px) {
+  .filling-overlay { align-items: center; }
+}
+.filling-modal {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 480px;
+  padding: 1.5rem 1.5rem 2rem;
+}
+@media (min-width: 601px) {
+  .filling-modal { border-radius: 20px; }
+}
+.filling-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.filling-modal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--plum);
+}
+.filling-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--mid);
+  padding: 0.2rem 0.4rem;
+}
+.filling-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.filling-option {
+  background: var(--cream, #faf7f2);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+.filling-option:hover {
+  border-color: var(--plum);
+  background: #f3eaf9;
+}
+.filling-option img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.filling-option-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.filling-option-desc {
+  font-size: 0.72rem;
+  color: var(--mid);
+}
+.filling-option-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--rose);
+  margin-top: 0.1rem;
 }
