@@ -29,7 +29,10 @@
       "Bash(mkdir -p \"/Users/livaguano/Two Ladies Kitchen/.claude\" && ls \"/Users/livaguano/Two Ladies Kitchen/.claude/\")",
       "Bash(sed -i '' 's|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|<li><a href=\"press.html\">Press</a></li>\\\\n      <li><a href=\"faq.html\">FAQ</a></li>\\\\n      <li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li>|g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
       "Bash(python3 -m http.server 3457)",
-      "Bash(kill 4142)"
+      "Bash(kill 4142)",
+      "Bash(kill 4751)",
+      "Bash(sed -i '' 's/style\\\\.css?v=10/style.css?v=11/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
+      "Bash(sed -i '' 's/style\\\\.css?v=11/style.css?v=12/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)"
     ]
   }
 }

@@ -2782,14 +2782,17 @@ footer {
   .modal-hero {
     flex-direction: column;
   }
-  .modal-img,
-  .modal-img img {
-    width: 100%;
+  .modal-img {
+    width: 100% !important;
     height: 220px;
     min-height: unset;
     border-radius: 0;
   }
   .modal-img img {
+    width: 100% !important;
+    height: 220px;
+    min-height: unset;
+    border-radius: 0;
     object-fit: contain;
     background: #f3e5f5;
   }
