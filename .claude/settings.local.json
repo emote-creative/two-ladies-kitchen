@@ -36,7 +36,8 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(sed -i '' 's/style\\\\.css?v=12/style.css?v=13/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)"
+      "Bash(sed -i '' 's/style\\\\.css?v=12/style.css?v=13/g' \"/Users/livaguano/Two Ladies Kitchen/\"*.html)",
+      "Bash(git commit *)"
     ]
   }
 }
