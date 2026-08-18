@@ -1020,6 +1020,13 @@ body > nav {
   display: block;
 }
 
+.menu-item[data-id="plum"] .item-photo {
+  background: #fff;
+}
+.menu-item[data-id="plum"] .item-photo img {
+  mix-blend-mode: multiply;
+}
+
 .item-info {
   padding: 0.85rem 1rem;
   flex: 1;
