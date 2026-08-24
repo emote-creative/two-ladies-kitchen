@@ -42,7 +42,10 @@
       "Bash(git restore *)",
       "Bash(git config *)",
       "Bash(git rm *)",
-      "Bash(git hash-object *)"
+      "Bash(git hash-object *)",
+      "Bash(cp \"images/Traditional Mochi/Plum FlowerUpdated.png\" \"images/Traditional Mochi/Plum Flower.png\")",
+      "Bash(cp \"images/Contemporary Mochi/Peanut Butterwebsite.png\" \"images/Contemporary Mochi/peanut butter.png\")",
+      "Bash(cp \"images/Manju/taiyakiupdated.png\" \"images/Manju/taiyaki.png\")"
     ]
   }
 }
