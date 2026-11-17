@@ -630,12 +630,6 @@
 
       const overlay = document.getElementById('eventsPopupOverlay');
       overlay.style.display = 'flex';
-      overlay.addEventListener('click', e => { if (e.target === overlay) closeEventsPopup(); });
-
-      // Auto-dismiss after 15 seconds if no interaction
-      setTimeout(() => {
-        if (overlay.style.display !== 'none') closeEventsPopup();
-      }, 15000);
     });
   </script>
 </body>
