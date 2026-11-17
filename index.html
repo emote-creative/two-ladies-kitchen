@@ -515,6 +515,20 @@
 
       <!-- Events list -->
       <div style="padding:1.5rem 2rem;">
+        <div id="holidayHoursSection" style="display:none;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1.5px solid #f0e6f0;">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-purple);margin-bottom:0.6rem;">Holiday Hours</div>
+          <div class="hours-grid" style="font-size:0.85rem;">
+            <span class="day">Thu 11/26</span><span class="time">Closed (Thanksgiving)</span>
+            <span class="day">Tue 12/22</span><span class="time">10am – 4pm</span>
+            <span class="day">Wed 12/23</span><span class="time">10am – 4pm</span>
+            <span class="day">Thu 12/24</span><span class="time">10am – 3pm (Christmas Eve)</span>
+            <span class="day">Fri 12/25</span><span class="time">Closed (Christmas)</span>
+            <span class="day">Sat 12/26</span><span class="time">10am – 4pm</span>
+            <span class="day">Sun 12/27</span><span class="time">Closed</span>
+            <span class="day">Mon 12/28 – Wed 12/30</span><span class="time">10am – 4pm</span>
+            <span class="day">Thu 12/31</span><span class="time">9am – 3pm (New Year's Eve)</span>
+          </div>
+        </div>
         <div id="upcomingEventsList" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
 
         <div style="margin-top:1.4rem;padding-top:1.2rem;border-top:1.5px solid #f0e6f0;">
@@ -587,11 +601,18 @@
       sessionStorage.setItem('popupSeen', '1');
     }
 
+    const HOLIDAY_HOURS_CUTOFF = new Date(2027, 0, 1); // stop showing holiday hours after this date
+
     window.addEventListener('DOMContentLoaded', () => {
       if (sessionStorage.getItem('popupSeen')) return;
 
+      const showHolidayHours = new Date() < HOLIDAY_HOURS_CUTOFF;
+      if (showHolidayHours) {
+        document.getElementById('holidayHoursSection').style.display = 'block';
+      }
+
       const upcoming = getUpcoming();
-      if (upcoming.length === 0) return; // nothing coming up soon — stay quiet
+      if (upcoming.length === 0 && !showHolidayHours) return; // nothing coming up soon — stay quiet
 
       const list = document.getElementById('upcomingEventsList');
       upcoming.forEach(e => {
